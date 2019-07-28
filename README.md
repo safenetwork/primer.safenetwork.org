@@ -1,4 +1,4 @@
-#SAFE Network Primer
+# SAFE Network Primer
 
 An introductory guide to the world's first fully autonomous data and communications network https://jpl1.github.io/safenetworkprimer/
 
