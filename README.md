@@ -1,6 +1,6 @@
 # SAFE Network Primer
 
-An introductory guide to the world's first fully autonomous data and communications network https://jpl1.github.io/safenetworkprimer/
+An introductory guide to the world's first fully autonomous data and communications network https://primer.safenetwork.org
 
 The SAFE Network is a secure, decentralised P2P network being developed by MaidSafe.
 
