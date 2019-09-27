@@ -1,0 +1,155 @@
+.App {
+  text-align: left;
+}
+
+h1 {
+    color: #1f3a50;
+    text-align: center;
+}
+
+h2 {
+    color: #496c7d;
+    text-align: center;
+}
+h3 {
+    color: #496c7d;
+}
+
+
+/* For mobile phones: */
+[class*="App"] {
+    padding-top: 0%;
+    padding-right: 2%;
+    padding-bottom: 0%;
+    padding-left: 2%;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 600px) {
+
+    .App {
+        padding-top: 10%;
+    }
+
+    .App {
+        padding-right: 15%;
+    }
+
+    .App {
+        padding-bottom: 10%;
+    }
+
+    .App {
+        padding-left: 15%;
+    }
+}
+
+
+
+/* For mobile phones: */
+[class*="Img"] {
+ width:100%;
+ height:auto;
+}
+
+
+
+@media only screen and (min-width: 600px) {
+
+    .Img {
+        width: 70%;
+        height: auto;
+    }
+
+}
+
+/* For mobile phones: */
+[class*="Img1"] {
+    width: 100%;
+    height: auto;
+}
+
+
+
+@media only screen and (min-width: 600px) {
+
+    .Img1 {
+        width: 50%;
+        height: auto;
+    }
+}
+
+.Topbar {
+    color: white;
+}
+.Pullquote {
+    font-size: calc(12px + 2vmin);
+    color: orange;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.Full-width-pic {
+    background-color: lightgray;
+    color: white;
+    margin: 0px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.What-does-that-mean {
+    background-color: #f2e14c;
+    color: black;
+    margin: 0%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.What-does-that-mean h3 {
+        text-transform: uppercase;
+        color: black;
+}
+
+.Keep-it-simple h3 {
+    text-transform: uppercase;
+    color: white;
+}
+
+
+.Keep-it-simple {
+    background-color: #f0572a;
+    color: white;
+    margin: 0%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+a:link {
+    color: #513c5a;
+}
+
+a:visited {
+    color: #6666ff;
+}
