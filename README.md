@@ -4,7 +4,7 @@
 
 An introductory guide to the world's first fully autonomous data and communications network
 
-The SAFE Network is a secure, decentralised P2P network being developed by MaidSafe.
+The SAFE Network is a secure, decentralized P2P network being developed by [MaidSafe](https://github.com/maidsafe).
 
 Contents
 
