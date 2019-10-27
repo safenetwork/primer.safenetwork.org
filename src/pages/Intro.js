@@ -11,14 +11,9 @@ const component = () => (
         <p>The Network is &lsquo;trustless&rsquo;, with no central point of control and no single point of failure. With connectivity and security taken care of, the Network is simple from the point of view of developers, with no need to worry about low-level storage, networking, backups and computing resources. For people using the Network to store and share data and messages the burden of ensuring the security of precious information would be drastically reduced.</p>
         <p>Anyone with a connected device can join the network anonymously (subject to a resource test) as a provider, and anyone can use the network to store data or peruse public information on it. The Network is thus a platform on which new digital worlds can be constructed.</p>
         <p>This guide outlines how the SAFE Network is constructed to achieve these aims. While it is somewhat technical in places, it's intended very much as an overview, and even those with very little technical knowledge should be able to gain a good working understanding of the SAFE Network. For those requiring more depth, there are plenty of pointers as to where they can find the relevant information.</p>
-        <p>This edition of the Primer (February 2019) covers new developments including the consensus algorithm PARSEC and ways in which the Network defends itself against common forms of attack.</p>
-        <p>Note: the following topics are now out of date.
-            <ul>
-                <li>Chapter 2: Crust has been deprecated in favour of quic-p2p</li>
-                <li>Chapter 3: SAFE Browser is now available for mobile devices (Android)</li>
-                <li>Chapter 10: MutableData type is being deprecated in favour of AppendableData</li>
-            </ul></p>
-        <p>The Primer will be updated in due course.</p>
+        <p>This update to the Primer (October 2019) covers the consensus algorithm PARSEC, ways in which the Network defends itself against common forms of attack, the new AppendOnly data type and the introduction of the quic-p2p routing library which replaces Crust.</p>
+      
+        
         <div bgcol="#1f3a60" height="10px"></div>
         <h2>Contents</h2>
         <p><br /><a href='#ch1'>1. Background and fundamentals</a>

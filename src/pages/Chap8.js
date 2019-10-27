@@ -22,17 +22,18 @@ const component = () => (
 
         <p>When a user of the Network requests some data, for example by browsing a website, a number of things happen. First, the Client software makes a request for the required data chunks. This message (a GET request) is then propagated across the Vaults, and when the chunk is found there is a competition between the Vaults in that section to deliver it to the Network where it will be routed back to the requester. The first Vault to deliver will have a chance of being rewarded with one Safecoin. This process is described as a Farming Attempt.</p>
 
-        <p>A successful Farming Attempt will be rewarded by payment in Safecoin. However, the probability of this happening will depend on the farming_rate, which is a variable based on the quantity of free resources in the Network as well as the number of Safecoin in circulation. The Network will always try to maintain free space of at least 30 percent of its total capacity (to cover a disconnection or outage in certain parts of the Network). When the free space drops below 30 percent of the total capacity, the farming_rate will go up and more Farming Attempts will succeed. This way Farmers make more money providing chunks to the Network. It works the other way around as well. When there are too many Farmers providing storage space the farming_rate will go down. This happens automatically, and the effect of this is to create an incentive for farmers to provide storage when the overall spare capacity is low, and a disincentive when the amount of free space is high.&nbsp;</p>
+        <p>A successful Farming Attempt will be rewarded by payment in Safecoin. However, the probability of this happening will depend on the farming_rate, which is a variable based on the quantity of free resources in the Network as well as the number of Safecoin in circulation. The Network will always try to maintain free space of at least 30 percent of its total capacity (to cover a disconnection or outage in certain parts of the Network). When the free space drops below 30 percent of the total capacity, the farming_rate will go up and more Farming Attempts will succeed. This way Farmers make more money providing chunks to the Network. It works the other way around as well. When there are too many Farmers providing storage space the farming_rate will go down. This happens automatically, and the effect is to create an incentive for farmers to provide storage when the overall spare capacity is low, and a disincentive when the amount of free space is high.&nbsp;</p>
         <div className="What-does-that-mean">
         <h3>What does that mean?</h3>
 
         <p>Farming - a Vault delivers a data chunk that it is storing to the SAFE Network and earns Safecoin in return.</p>
 
-        <p>Farming Attempt - by delivering data chunks when requested, a Vault may gain the opportunity to make a Farming Attempt. This consists of sending a validated request to a random Safecoin address. If an owned Safecoin already exists at that address the Attempt fails. If there is no Safecoin there, one is created and awarded to the requesting Vault, i.e., a successful Farming Attempt has been made.&nbsp; farming_rate - a variable used to attract or discourage Farmers in order to maintain a certain level of free space (about 30 percent of the total capacity).</p>
+            <p>Farming Attempt - by delivering data chunks when requested, a Vault may gain the opportunity to make a Farming Attempt. </p>
+            <p>farming_rate - a variable used to attract or discourage Farmers in order to maintain a certain level of free space (about 30 percent of the total capacity).</p>
 
-        <p>MaidSafeCoin - a cryptocurrency token that will be exchangeable for Safecoin once the network is live.</p>
+        <p>MaidSafeCoin - a cryptocurrency token currently available for purchase that will be exchangeable for Safecoin once the network is live.</p>
 
-            <p>Proof of Resource&nbsp; -1. a test whether a Vault that wants to join the network has sufficient bandwidth and CPU power. If it fails the test it will not be allowed to join. 2. Random checks are occasionally made by managing nodes to ensure that the Vault is indeed maintaining chunks it is supposed to be storing. If it fails the challenge (by not providing the demanded proof) its Node Age is diminished.</p>
+            <p>Proof of Resource&nbsp; - 1. a test whether a Vault that wants to join the network has sufficient bandwidth and CPU power. If it fails the test it will not be allowed to join. 2. Random checks are occasionally made by managing nodes to ensure that the Vault is indeed maintaining chunks it is supposed to be storing. If it fails the challenge (by not providing the demanded proof) its Node Age is diminished.</p>
             </div>
         <div className="Full-width-pic" align="center">
 
@@ -58,8 +59,7 @@ const component = () => (
 
     
 
-        <p>Unlike Bitcoins which are numbers on a blockchain, Safecoins are MutableData (MD) entities (see Chapter 10). When they change hands, the transaction is recorded as an entry in the MD. The full history of the coin is not recorded, unlike with blockchain-based currencies.</p>
-
+       
         <p>The supply of Safecoin will be limited to 4.3 billion coins, each with its own unique identity. Safecoins will be recycled when users exchange them for Network services, which means that there is always a supply for Farmers to earn.</p>
 
         <p>Note: At the time of writing the SAFE Network is still pre-release (Alpha) and Safecoin is not yet implemented. However, a token called MaidSafeCoin (MAID) can be purchased on cryptocurrency exchanges. When the Network goes live MAID will be exchanged for Safecoin on a 1:1 basis.</p>

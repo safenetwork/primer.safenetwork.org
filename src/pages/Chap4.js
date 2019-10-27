@@ -10,12 +10,11 @@ const Chap4 = () => (
 
         <p>Browsing sites and storing data on the SAFE Network is just as simple as on the current Web but with greatly enhanced privacy, security and control. The SAFE Network is designed with ease of use in mind for app developers, too. Developing simple apps for SAFE is just a short step from what developers are familiar with in terms of APIs and methodologies. However, those wishing to perform more complex systems-level tasks will need to go deeper into its architecture - there are some big differences between traditional client-server systems and decentralized architectures. This chapter provides a brief introduction to the topic.</p>
         <h3>Sections</h3>
-        <p>The first step in understanding the architecture of the SAFE Network is to take a brief look at distributed hash tables (DHTs).</p>
+        <p>The first step in understanding the architecture of the SAFE Network is to take a look at distributed hash tables (DHTs).</p>
         <p>Petar Maymounkov and David Mazi&egrave;res released the Kademlia distributed hash table in 2002. The idea is that nodes form a network overlay, and are identified with a different node identification system. So a node (in this case a Vault) could have an IP address of 96.251.182.97 while it uses 17846cb8a4b53c9e44c616d2415a15984283eee975a1dac8f488dd91d0aed1cd as a unique 256-bit address in XOR space.</p>
         <p>Bitwise Exclusive OR (XOR) has the feature that each address is a unique distance from any other address in the entire address range. XOR distance bears no relation to physical distance. Indeed, two pieces of data on the network may be very close XOR-wise but be sitting on machines located on opposite sides of the world.</p>
         <p>MaidSafe developed an enhancement to Kademlia by splitting the 256-bit address range into so-called 'Disjoint Sections', or Sections for short. A 256-bit address space has 2<sup>256</sup> -1 possible addresses which is an extremely large number to manage, but it can be split up into smaller Sections based on address, with each Section being managed by a group of nodes.</p>
-        <p>The nodes managing a Section will always try to reach consensus (agreement) amongst themselves on any Network event happening within that Disjoint Section. They also &lsquo;group sign&rsquo; messages that travel over the wider Network so that other nodes and/or Sections can cryptographically verify the validity of each message and action (such as groups forming, splitting and merging). These group signatures are stored in &lsquo;Data Chains&rsquo; which are secured and held by members of that Section, and by neighbouring Sections, for the life of each session.</p>
-        <p>This is known as Group Consensus.</p>
+        <p>The nodes managing a Section will always try to reach consensus (agreement) amongst themselves on any Network event happening within that Disjoint Section. They also &lsquo;group sign&rsquo; messages that travel over the wider Network so that other nodes and/or Sections can cryptographically verify the validity of each message and action (such as groups forming, splitting and merging). These group signatures are stored in &lsquo;Data Chains&rsquo; which are secured and held by members of that Section, and by neighbouring Sections, for the life of each session. This is known as Group Consensus.</p>
         <div className="What-does-that-mean">
         <h3>What does that mean?</h3>
         <p>Distributed hash table &ndash; a map of where data is stored on a distributed network.</p>
@@ -42,7 +41,7 @@ const Chap4 = () => (
         </div>
      
   
-        <p>If the Group of nodes that manage a particular Section grows significantly in the eyes of the Network, it will split into two with each new Group managing a smaller Section (range of addresses). Likewise, when nodes leave the Network, if the number of nodes drops below a certain threshold level (specified by a parameter called group_size), the reduced size will act as a trigger for that Section to attempt to merge with a Sibling Section. At present, group_size is 8, but this is very likely to change.</p>
+        <p>If the Group of nodes that manage a particular Section grows significantly in the eyes of the Network, it will split into two with each new Group managing a smaller Section (range of addresses). Likewise, when nodes leave the Network, if the number of nodes drops below a certain threshold level (specified by a parameter called group_size), the reduced size will act as a trigger for that Section to attempt to merge with a Sibling Section. Experiments are ongoing to find the optimum group size, but it will probably be around 100.</p>
   
         <h3>Consensus and quorum</h3>
         <p>The nodes (Vaults) managing a Section will always try to reach consensus among themselves on network events. They also &lsquo;group sign&rsquo; messages that travel over the wider network so other nodes in other Sections can cryptographically verify the validity of each message and action. These group signatures are stored in containers called Data Chains which are secured and held by all Vaults in the group. All events such as forming, splitting and merging Sections are recorded and stored in this way.</p>
@@ -50,7 +49,7 @@ const Chap4 = () => (
         <p>Any new node joining the Section can read the Data Chain. Sections also share some information about events and current state with other Sections that are close to them.</p>
         <div className="Keep-it-simple">
         <h3>Keep it simple!</h3>
-        <p>In order for something to happen on the Network, for example, the storing of a data chunk at a certain address, the Group of Vaults with responsibility for that address must decide that the action is valid. If the required quorum size (for example, 5 Vaults out of 8) agree that the event is valid, it will go ahead; if not, it won't. </p>
+        <p>In order for something to happen on the Network, for example, the storing of a data chunk at a certain address, the Group of Vaults with responsibility for that address must decide that the action is valid. If the required quorum size (for example, 50 Vaults out of 80) agree that the event is valid, it will go ahead; if not, it won't. </p>
         </div>
         <p>A record of all such events is kept in a container called a Data Chain. Any new node joining the Section can read the Data Chain. Sections also share some information about events and current state with other Sections that are close to them.</p>
            
@@ -58,7 +57,7 @@ const Chap4 = () => (
   
         <p className="Pullquote">"No node in the SAFE Network has a complete overview of the network"</p>
         <p>The closer a node is to a certain address space on the SAFE Network, the more information it has about data that is stored at that address. And logically the further away a Vault is, the less information it has. The bigger the Network becomes, the more secure it will get because an individual Vault will have influence over a decreasing range of addresses.</p>
-        <p>An action or event happening in a Section is only valid once a quorum has approved it. A change of state needs to be signed by a certain proportion of that Group known as the quorum size. Nodes follow rules that stipulate the quorum size. In a group of eight nodes, five are needed to approve an action (such as a request by a Client to store a chunk of data); in this case, the quorum size is 62.5 percent.</p>
+        <p>An action or event happening in a Section is only valid once a quorum has approved it. A change of state needs to be signed by a certain proportion of that Group known as the quorum size. Nodes follow rules that stipulate the quorum size. In a group of 80 nodes, 50 are required to approve an action (such as a request by a Client to store a chunk of data); in this case, the quorum size is 62.5 percent.</p>
         <p>Notice that there are no external trackers or managers involved in any of these decisions. A Group of Vaults operates in a fully autonomous way within the Network.&nbsp; &nbsp;</p>
         <h3>Tell me more...</h3>
         <p><a href="http://www.globule.org/publi/SDST_acmcs2009.html">A Survey of DHT Security Techniques (Globule)</a></p>

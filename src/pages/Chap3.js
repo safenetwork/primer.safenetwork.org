@@ -36,7 +36,7 @@ const component = () => (
         <div className="What-does-that-mean">
         <h3>What does that mean?</h3>
 
-        <p>Crust - a Rust library (Connections in Rust) maintained by MaidSafe that allows for NAT traversal - a technique of establishing and maintaining IP connections in P2P networks.</p>
+        <p>quic-p2p &ndash; a software library that allows machines to connect to each other in a secure and reliable peer-to-peer fashion and to reconnect after leaving without requiring a hard-coded list of other devices.</p>
 
         <p>Vault &ndash; the machines (nodes) that make up the SAFE Network run Vault software. In this Primer we use the words Vault and node interchangeably. Vaults provide routing and communications capabilities to the Network and also store data in the form of chunks, for which they can earn Safecoin (Farming) when that data is retrieved.</p>
 
@@ -44,7 +44,7 @@ const component = () => (
 
         <p>SAFE Browser &ndash; a browser for surfing the SAFE web.</p>
 
-        <p>Authenticator - enables users to create an account and login without going via a server - known as Self-Authentication - and to approve or deny access to their data by apps.</p>
+        <p>Authenticator - enables users to create an account and login without going via a server (Self-Authentication) and also to approve or deny access to their data by apps.</p>
 
         <p>Self-Authentication - a feature that enables a user to create an account and log into the decentralized Network securely and anonymously without any central server to mediate the login process.</p>
 
@@ -54,15 +54,15 @@ const component = () => (
 
         </div>
 
-        <p>The forming, merging and splitting of Sections happens in a fully autonomous way as computers join and leave the Network. The same goes for the routing of chunks across the Network. There are no central servers or agents needed to form this Network (unlike, say, like BitTorrent which uses trackers). Instead, the Vaults follow a strict set of rules to create and maintain the Network, requiring no central authority to do so.</p>
+        <p>The forming, merging and splitting of Sections happens in a fully autonomous way as computers join and leave the Network. The same goes for the routing of chunks across the Network. There are no central servers or agents needed to form this Network (unlike, say, like BitTorrent which uses trackers). Instead, the Vaults follow a set of strict rules to create and maintain the Network, requiring no central authority to do so.</p>
 
-        <p>Vaults have several different functions to fulfil. They route and store chunks of data. They cryptographically check messages and cluster into collections of nodes that will manage certain Sections of the Network. They make decisions about what should and should not happen, such as whether a new Vault should be allowed to join the Network. For this they have two &lsquo;personas&rsquo; the Client Manager and the Data Manager (See Chapter 9).</p>
+        <p>Vaults have several different functions to fulfil. They route and store chunks of data; they cryptographically check messages; they cluster into collections of nodes that will manage certain Sections of the Network; they make decisions about what should and should not happen, such as whether a new Vault should be allowed to join the Network. These responsibilities are divided between two separate &lsquo;personas&rsquo; the Client Manager and the Data Manager (See Chapter 9).</p>
 
         <p>Running a Vault in the SAFE Network is called Farming because users look after the data until it is needed, at which point they may earn payment for their efforts (see Chapter 8).</p>
 
         <h3>The Client</h3>
 
-        <p>Just as you don&rsquo;t need to run a web server to use the Web, you don&rsquo;t have to run a Vault to access the SAFE Network. Ordinary users interact with the network via the Client. Currently the Client is comprised of the SAFE Browser and the Authenticator. The Authenticator supports Windows, OSX, Linux, Android and iOS, whereas the SAFE Browser supports Windows, OSX and Linux with mobile support to follow.</p>
+        <p>Just as you don&rsquo;t need to run a web server to use the Web, you don&rsquo;t have to run a Vault to access the SAFE Network. Ordinary users interact with the network via the Client. Currently the Client is comprised of the SAFE Browser, the Authenticator, and, optionally, a command line interface (CLI) tool. The Authenticator is bundled with the Browser and is also available as a standalone application. The Browser and Authenticator support Windows, OSX, Linux, Android and iOS, whereas the SAFE CLI supports Windows, OSX and Linux.</p>
 
         <p>Self-Authentication is a key innovation of the Network. At no point does the Network ever store a user&rsquo;s password. Therefore, there is no chance of that password being attacked on the Network. Instead, the Authenticator allows a user to create an account and log into a decentralized network securely and anonymously without requiring any central server to mediate the login process, or any trusted third party to store and manage users&rsquo; credentials. With Self-Authentication, the user generates his or her own credentials which are stored on the SAFE Network in such a way that they are cryptographically obfuscated from all other parts of the Network.</p>
 
@@ -82,6 +82,11 @@ const component = () => (
         <p><a href="https://github.com/maidsafe/safe_vault">An Implementation of a SAFE Network Vault (Github)</a></p>
         <p><a href="https://github.com/maidsafe/safe_client_libs">SAFE Client libraries (Github)</a></p>
         <p><a href="https://github.com/maidsafe/safe_browser">SAFE Browser (Github)</a></p>
+		<p><a href="https://github.com/maidsafe/safe_browser">SAFE Mobile Browser (Github)</a></p>
+        <p><a href="https://github.com/maidsafe/safe-cli">SAFE CLI -  a CLI (Command Line Interface) for the SAFE Network (Github)</a></p>
+		<p><a href="https://github.com/maidsafe/safe_client_libs/tree/master/safe_authenticator">SAFE Authenticator library for interfacing with Authenticator frontend (Github)</a></p>
+		<p><a href="https://github.com/maidsafe/safe-authenticator-cli">SAFE Authenticator CLI(Github)</a></p>
+		
        
     </div>
 

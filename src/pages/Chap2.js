@@ -26,7 +26,7 @@ const component = () => (
             <img className="Img" src={networking_layers} alt="Networking layers" align="center" />
         </div>
 
-        <p width="80%" align="center" ><em>The SAFE Network complements three of the seven networking layers in the OSI model for improved security, privacy and autonomy.</em></p>
+        
 
    
 
@@ -48,21 +48,19 @@ const component = () => (
          
  
 
-        <h3>Crust</h3>
+        <h3>quic-p2p</h3>
 
-        <p>Crust (Connections in Rust) is a low-level networking library that is optimized for peer-to-peer connections and data transportation. It supports multiple protocols allowing ordinary PCs and smartphones to connect to each other and is cryptographically secure. In tests involving the community Crust successfully connected machines from all over the world (including China) with a high rate of success (over 20,000 attempted connections from 39 countries in a community test run in 2018).</p>
-
-        <p>Experiments with Quinn, a Rust implementation of the QUIC transport protocol, are ongoing. It is likely that Quinn will be used to augment or even replace Crust in the future.</p>
+        <p>quic-p2p is based on the QUIC protocol created at Google. It is a networking library that enables peers on a P2P network to communicate securely, and to re-join the network without requiring a hard-coded list of known peers; such a list would be an obvious security hole. It supports multiple protocols allowing ordinary PCs and smartphones to connect to each other and is cryptographically secure. quic-p2p supercedes the Crust library.</p>
 
         <h3>Routing</h3>
 
-        <p>On top of Crust sits Routing. It is the overlay networking and routing layer which forms the &lsquo;brain&rsquo; of the SAFE Network. Its purpose is to form a decentralized Internet and route information within it.</p>
+        <p>On top of quic-p2p sits Routing. This is the overlay networking and routing layer which forms the &lsquo;brain&rsquo; of the SAFE Network. Its purpose is to form a decentralized Internet and route information within it.</p>
 
-        <p>Routing is based on an algorithm that extends Kademlia DHT routing (see Chapter 4). It uses 32-byte XOR addresses to locate data on the network. It is mathematically guaranteed that messages can be routed from any part of the network to any other end.</p>
+        <p>Routing is based on an algorithm that extends Kademlia DHT routing (see Chapter 4). It uses 32-byte (256 bit) XOR addresses to locate data on the network. It is mathematically guaranteed that messages can be routed from any part of the network to any other destination.</p>
 
         <p>Routing works purely on the terms of Group Consensus (see Chapter 4). We don&rsquo;t trust a single entity, only a group decision with eventual consistency. In order to come to this eventual consistency, the routing layer uses the consensus mechanism PARSEC (See Chapter 7).</p>
 
-        <p>Vaults and Clients are the way that users interact with the Network, either by providing resources in return for payment or by storing data and browsing the SAFE web. They are discussed further in the next chapter.</p>
+        <p>Vaults and Clients provide the main means for users to interact with the Network, either by providing resources in return for payment by running a Vault or by storing data and browsing the SAFE web using hte Client. They are discussed further in the next chapter.</p>
 
         <p>All SAFE Network code is open source.</p>
 
@@ -71,10 +69,9 @@ const component = () => (
         <p><a href="https://hub.safedev.org/core_technology/"> Core Technology (SAFE Network DevHub)</a></p>
 
         <p><a href="https://github.com/maidsafe/rfcs/blob/master/text/0043-async-safe-core/0043-async-safe-core.md"> SAFE core API (Github)</a></p>
+		
+		  <p><a href="https://github.com/maidsafe/quic-p2p"> quic-p2p - a peer-to-peer communications library for Rust based on QUIC protocol (Github)</a></p>
 
-    <p><a href="https://github.com/maidsafe/crust"> Crust- Reliable p2p network connections in Rust with NAT traversal (Github)</a></p>
-
-        <p><a href="https://medium.com/safenetwork/the-successful-conclusion-of-the-crust-tests-29ed4a210214"> The Successful Conclusion of the Crust Tests</a></p>
 
     <p><a href="https://docs.rs/quinn/0.2.0/quinn/"> Quinn - QUIC protocol in Rust</a></p>
 

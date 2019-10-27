@@ -1,6 +1,6 @@
 import React from 'react';
 import xor_url from '../images/xor_url.PNG';
-import api_flow from '../images/api_flow.PNG';
+import api_flow_revised from '../images/api_flow_revised.PNG';
 
 
 
@@ -9,20 +9,20 @@ const component = () => (
 
     <div className='chapter'>
         <h2 id='ch11'>11. The SAFE API</h2>
-        <p>The SAFE API is used by developers to interact directly with the SAFE Network. It is available to use in JavaScript, Node.js, Java and C#. Apps connecting to the SAFE Network are granted d ifferent levels of access to data through the API depending on whether they are authorized or not. Apps that are not authorized can only access public data, such as websites. Authorized Apps can access the full range of network functionality.</p>
+        <p>The SAFE API is used by developers to interact directly with the SAFE Network. It is available to use in JavaScript, Node.js, Java and C#. Apps connecting to the SAFE Network are granted different levels of access to data through the API depending on whether they are authorized or not. Apps that are not authorized can only access public data, such as websites. Authorized Apps can access the full range of network functionality.</p>
 
         <div className="Full-width-pic" align="center">
 
-            <img className="Img1" src={api_flow} alt="API-Flow" align="center" />
+            <img className="Img1" src={api_flow_revised} alt="API-Flow" align="center" />
         </div>
 
         <p>The SAFE Network has default containers in which certain types of files are stored. For example, _documents is used to store document-related data; _downloads is the container for downloaded content; _music is the place to store music files, and so on. Two special cases are _public - to store unencrypted data (the container is encrypted even if its contents are not), and _publicNames - to store Public IDs which can be looked up for public information.</p>
-        <p>Application development for the SAFE Network is no different from standard practice. There are safe_app libraries based on the platform the application is being built on. As mentioned, Node.js, Javascript, Java and C# are best supported at present. Web applications can be built using the DOM API of the SAFE Browser and there are libraries for Android and iOS for mobile devices.</p>
+        <p>Application development for the SAFE Network is no different from standard practice. There are safe_app libraries based on the platform the application is being built on. As mentioned, Node.js, Javascript, Java and C# are best supported at present. Web applications can be built using the DOM API of the SAFE Browser and there are libraries for Android and iOS.</p>
 
         <h3>Authorization</h3>
         <p>Applications need to be authorized before they can access data on the Network. In a similar way to the familiar OAuth process, the application sends a request using the library for authorization. When the authorization is approved by the user, the application receives a token which is used to connect to the SAFE Network. Authorization is achieved via an application call to the Authenticator, which is currently bundled with the SAFE Browser.</p>
 
-        <p>Authorization is fine grained. An application can create its own container and request access to default containers or other applications&rsquo; containers through the authorization request. READ, WRITE, UPDATE, DELETE, MANAGE permissions can be requested for every container. The API features many methods for allowing apps to interact with and deploy MutableData and ImmutableData types (see Chapter 10) and to write and retrieve data from the network.</p>
+        <p>Authorization is fine grained. An application can create its own container and request access to default containers or other applications&rsquo; containers through the authorization request. READ, WRITE, UPDATE, DELETE, MANAGE permissions can be requested for every container. The API features many methods for allowing apps to interact with and deploy MutableData, AppendOnlyData and ImmutableData types (see Chapter 10) and to write and retrieve data from the network.</p>
         <h3>CipherOpt and Crypto APIs</h3>
         <p>The safe_app library also provides crypto API functions. The safeCipherOpt API provides functions to create different encryption options to be applied while storing the data in the network. Sign key handling APIs were a work in progress at the time of writing.</p>
         <p>There are three types of CipherOpts:</p>
@@ -32,11 +32,10 @@ const component = () => (
             <li>Asymmetric - Data is encrypted using a key pair.</li>
         </ul>
 
-        <p>The safeCrypto API functions provide handy cryptographic functions, including hashing and</p>
-        <p>generating key pairs.</p>
+        <p>The safeCrypto API provides handy cryptographic functions, including hashing and generating key pairs.</p>
         <h3>DOM API</h3>
-        <p>A web application can communicate with the SAFE Network and Authenticator by interacting</p>
-        <p>directly with the SAFE Browser&rsquo;s DOM API, i.e. window.safe* functions.</p>
+        <p>A web application can communicate with the SAFE Network and Authenticator by interacting
+        directly with the SAFE Browser&rsquo;s DOM API, i.e. window.safe* functions.</p>
 
         <p>This API is very similar to the Node.js API, the main difference being that the web application receives handles for each of the objects that are instantiated when interacting with the API, e.g. SAFEApp and MutableData instances. The web app is required to release the handles provided by calling a specific &lsquo;free&rsquo; function on each of the tokens received.</p>
         <h3>Support for XOR-URLs:</h3>
