@@ -60,7 +60,7 @@ const component = () => (
 
         <p>Routing works purely on the terms of Group Consensus (see Chapter 4). We don&rsquo;t trust a single entity, only a group decision with eventual consistency. In order to come to this eventual consistency, the routing layer uses the consensus mechanism PARSEC (See Chapter 7).</p>
 
-        <p>Vaults and Clients provide the main means for users to interact with the Network, either by providing resources in return for payment by running a Vault or by storing data and browsing the SAFE web using hte Client. They are discussed further in the next chapter.</p>
+        <p>Vaults and Clients provide the main means for users to interact with the Network, either by providing resources in return for payment by running a Vault or by storing data and browsing the SAFE web using the Client. They are discussed further in the next chapter.</p>
 
         <p>All SAFE Network code is open source.</p>
 
