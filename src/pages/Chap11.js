@@ -38,9 +38,9 @@ const component = () => (
         directly with the SAFE Browser&rsquo;s DOM API, i.e. window.safe* functions.</p>
 
         <p>This API is very similar to the Node.js API, the main difference being that the web application receives handles for each of the objects that are instantiated when interacting with the API, e.g. SAFEApp and MutableData instances. The web app is required to release the handles provided by calling a specific &lsquo;free&rsquo; function on each of the tokens received.</p>
-        <h3>Support for XOR-URLs:</h3>
-        <p>The DOM API also allows applications to link or reference any MutableData/ImmutableData on the Network using its XOR-URL. This is a URL based on the file&rsquo;s XOR location on the Network which also contains information about the file&rsquo;s mime-type so the SAFE Browser can fetch a file (say an image) and render it as usual.</p>
-        <p>As shown in the screenshot below, the SAFE Browser is capable of decoding the XOR-URL to extract the location of the content, content type (if the MIME type is also encoded in the XOR-URL), fetch it, and render it accordingly as it does it with any publicName-URL (i.e. the URLs which make use of the SAFE DNS system):</p>
+        <h3>Support for XOR-URLs</h3>
+        <p>The DOM API also allows applications to link or reference any MutableData/ImmutableData on the Network using its XOR-URL. This is a URL based on the file&rsquo;s XOR location on the Network which also contains information about the file&rsquo;s MIME-type so the SAFE Browser can fetch a file (say an image) and render it as usual.</p>
+        <p>As shown in the screenshot below, the SAFE Browser can decode the XOR-URL to extract the location of the content, content type (if the MIME type is also encoded in the XOR-URL), fetch it, and render it accordingly as it does it with any publicName-URL (i.e. the URLs which make use of the SAFE DNS system):</p>
         <div className="Full-width-pic" align="center">
 
             <img src={xor_url} alt="XOR-URL" width="100%" align="center" />
