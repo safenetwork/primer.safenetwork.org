@@ -40,7 +40,7 @@ const component = () => (
 
         <p>Vault &ndash; the machines (nodes) that make up the SAFE Network run Vault software. In this Primer we use the words Vault and node interchangeably. Vaults provide routing and communications capabilities to the Network and also store data in the form of chunks, for which they can earn Safecoin (Farming) when that data is retrieved.</p>
 
-        <p>Client &ndash; a program that allows users to connect to the network and make use of its services. At the present time this is incorporated into the SAFE Browser.</p>
+        <p>Client &ndash; a program that allows users to connect to the network and make use of its services. At the present time this is incorporated into the SAFE Browser and it is also available as a command line interface (CLI) app.</p>
 
         <p>SAFE Browser &ndash; a browser for surfing the SAFE web.</p>
 
