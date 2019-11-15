@@ -24,7 +24,7 @@ const Chap4 = () => (
         <p>Group Consensus - when the minimum number of nodes in a Group agree on an order of events occurring on the network. Group Consensus is achieved using the PARSEC algorithm (Chapter 7).</p>
         <p>group_size &ndash; a parameter stipulating the minimum number of nodes that can look after a Section.</p>
         <p>Bootstrapping &ndash; starting up the SAFE Network by connecting together a minimum number of nodes. Bootstrapping is also used to describe a new node (Vault) joining the Network.</p>
-        <p>Bootstrap node &ndash; a node to which a new node (Vault) initially connects (via a proxy). Any node can potentially be a bootstrap node, so long as its IP address is written in the Vault&rsquo;s configuration file. </p>
+        <p>Bootstrap node &ndash; a node to which a new node (Vault) initially connects. Any Vault can potentially be a bootstrap node, so long as its IP address is written in the Vault&rsquo;s configuration file, or, for subsequent connections, its cache. </p>
         <p>Hash function &ndash; a function used to map data of arbitrary size to data of fixed size (e.g. a 256-bit string of characters) called a hash. Any change to the original data will result in a completely different hash. SAFE uses the SHA-3 hash function.</p>
         <p>Data Chain &ndash; A record of action, decisions and activity within a Section and its neighbours. It stores Section Info, Proofs and Neighbour Info for the purposes of relaying it to other Sections.</p>
         <p>Sharding &ndash; on SAFE Network this refers to the splitting of the Network into individual sections, each managed by a unique Group of nodes (Vaults).</p>
