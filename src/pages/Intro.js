@@ -2,7 +2,7 @@ import React from 'react';
 
 const component = () => (
     <div className='intro'>
-        <h2 id='ch9'>A brief introduction</h2>
+        <h2 id='ch0'>A brief introduction</h2>
   
         <p>Technological progress is a perpetual process of automation and abstraction. Difficult and complex tasks are made simple by software and machines until they are completely taken for granted. Technology moves on, taking down new blockers in the path to progress as it goes. A good example of this is cloud computing, where once complex server administration tasks have been replaced, from the point of view of the consumer, by point-and-click.</p>
         <p>The SAFE (Secure Access For Everyone) Network takes this further, automating the entire network of interconnected machines, making it autonomous, secure, anonymous and capable of&nbsp; storing, protecting and delivering data without any human involvement at all.</p>
@@ -11,7 +11,7 @@ const component = () => (
         <p>The Network is &lsquo;trustless&rsquo;, with no central point of control and no single point of failure. With connectivity and security taken care of, the Network is simple from the point of view of developers, with no need to worry about low-level storage, networking, backups and computing resources. For people using the Network to store and share data and messages the burden of ensuring the security of precious information would be drastically reduced.</p>
         <p>Anyone with a connected device can join the network anonymously (subject to a resource test) as a provider, and anyone can use the network to store data or peruse public information on it. The Network is thus a platform on which new digital worlds can be constructed.</p>
         <p>This guide outlines how the SAFE Network is constructed to achieve these aims. While it is somewhat technical in places, it's intended very much as an overview, and even those with very little technical knowledge should be able to gain a good working understanding of the SAFE Network. For those requiring more depth, there are plenty of pointers as to where they can find the relevant information.</p>
-        <p>This update to the Primer (October 2019) covers the consensus algorithm PARSEC, ways in which the Network defends itself against common forms of attack, the new AppendOnly data type and the introduction of the quic-p2p routing library which replaces Crust.</p>
+       
       
         
         <div bgcol="#1f3a60" height="10px"></div>
