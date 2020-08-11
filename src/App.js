@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Intro, Chap1, Chap2, Chap3 } from './pages';
 import Chap4 from './pages/Chap4';
 import Chap5 from './pages/Chap5';

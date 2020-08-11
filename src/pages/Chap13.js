@@ -12,11 +12,11 @@ const component = () => (
 
         <p>The SAFE Network is still in development. While many features and functionalities have already proven themselves under test conditions others, including Safecoin, are still to come.&nbsp; As with any cutting-edge experimental technology, the proof of the pudding is in the eating. But let&rsquo;s assume for a moment that the Network is successful and is widely adopted for various use cases including Internet browsing, IoT connectivity, data security, personal information management, medical records and more.</p>
 
-        <p>What would that world look like? First, most cyber attack strategies deployed today would be dead in the water. DDoS would not work as the Network would simply route around the affected nodes. Viruses and malware would be extremely limited in their depth of penetration. Ransomware would not raise a single dollar. Cyber-kinetic attacks aimed at disabling national infrastructure or taking control of a driverless car would be extremely hard to pull off. Medical records and other personal data would be ours and ours alone, to share as we see fit. For users there can be a single sign-on to multiple services. XOR networking with opportunistic caching promises faster speeds, data storage should be extremely cheap and the Network will offer high levels of availability. For developers having a single storage architecture to address has the potential to simplify the systems programmer&rsquo;s job. And data deduplication would allow for both simplicity and resource savings.</p>
+        <p>What would that world look like? First, most cyber attack strategies deployed today would be dead in the water. DDoS would not work as the Network would simply route around the affected nodes. Viruses and malware would be extremely limited in their depth of penetration. Ransomware would not raise a single dollar. Cyber attacks aimed at disabling national infrastructure or taking control of a driverless car would be extremely hard to pull off. Medical records and other personal data would be ours and ours alone, to share as we see fit. For users there can be a single sign-on to multiple services. XOR networking with opportunistic caching promises faster speeds, data storage should be extremely cheap and the Network will offer high levels of availability. For developers having a single storage architecture to address has the potential to simplify the systems programmer&rsquo;s job. And data deduplication would allow for both simplicity and resource savings.</p>
 
 
 
-        <div class="Pullquote">"There would be a rebalancing of power from the data-haves to the data have-nots"</div>
+        <div className="Pullquote">"There would be a rebalancing of power from the data-haves to the data have-nots"</div>
 
 
 
@@ -28,7 +28,7 @@ const component = () => (
 
         <h3>Roadmap</h3>
 
-        <p>As with all experimental research-driven projects the rate of progress is unpredictable, and MaidSafe avoid giving hard deadlines. However, there is a roadmap at <a href="https://safenetwork.tech/timeline/">https://safenetwork.tech/timeline/</a> in which the next developments are laid out. The next Alpha, SAFE Fleming, will allow anyone with a computer and an internet connection to join the Network and will enable fully encrypted transient data to flow across the Network. After that SAFE Maxwell will reintroduce user-run Vaults facilitating a much broader range of decentralized apps and use cases.</p>
+        <p>As with all experimental research-driven projects the rate of progress is unpredictable, and MaidSafe avoid giving hard deadlines. However, there is a roadmap at <a href="https://safenetwork.tech/timeline/">https://safenetwork.tech/timeline/</a> in which the next developments are laid out. The next MVP, SAFE Fleming, will allow anyone with a computer and an internet connection to join the Network.</p>
 
         <h2>About MaidSafe</h2>
 

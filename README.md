@@ -13,8 +13,8 @@ Contents
     Vaults and Clients
     The architecture of the SAFE Network
     Node Age
-    Everything's encrypted
-    PARSEC consensus algorithm
+    Encryption
+    Network-wide consensus not required
     Farming for Safecoin
     Vault personas
     Data types

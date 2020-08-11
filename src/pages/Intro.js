@@ -21,9 +21,9 @@ const component = () => (
             <br /><a href='#ch3'>3. Vaults and Clients</a>
             <br /><a href='#ch4'>4. The architecture of the SAFE Network</a>
             <br /><a href='#ch5'>5. Node Age</a>
-            <br /><a href='#ch6'>6. Everything's encrypted</a>
-            <br /><a href='#ch7'>7. PARSEC consensus algorithm</a>
-            <br /><a href='#ch6'>8. Farming for Safecoin</a>
+            <br /><a href='#ch6'>6. Encryption</a>
+            <br /><a href='#ch7'>7. Network-wide consensus not required </a>
+            <br /><a href='#ch8'>8. Farming for Safecoin</a>
             <br /><a href='#ch9'>9. Vault personas</a>
             <br /><a href='#ch10'>10. Data types</a>
             <br /><a href='#ch11'>11. The SAFE API</a>

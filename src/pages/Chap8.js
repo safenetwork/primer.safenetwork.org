@@ -20,7 +20,7 @@ const component = () => (
             <p>Farming is the process by which users who lend out spare storage can earn Safecoin, the currency of the SAFE Network. Safecoin can be spent on the Network, for example by uploading files.</p>
         </div>
 
-        <p>When a user of the Network requests some data, for example by browsing a website, a number of things happen. First, the Client software makes a request for the required data chunks. This message (a GET request) is then propagated across the Vaults, and when the chunk is found there is a competition between the Vaults in that section to deliver it to the Network where it will be routed back to the requester. The first Vault to deliver will have a chance of being rewarded with one Safecoin. This process is described as a Farming Attempt.</p>
+        <p>When a user of the Network requests some data, for example by browsing a website, a number of things happen. First, the Client software makes a request for the required data chunks. This message (a GET request) is then propagated across the Vaults, and when a chunk is found there is a competition between the Vaults in the Section where it is located to deliver it to the Network where it will be routed back to the requester. The first Vault to deliver will have a chance of being rewarded with one Safecoin. This process is described as a Farming Attempt.</p>
 
         <p>A successful Farming Attempt will be rewarded by payment in Safecoin. However, the probability of this happening will depend on the farming_rate, which is a variable based on the quantity of free resources in the Network as well as the number of Safecoin in circulation. The Network will always try to maintain free space of at least 30 percent of its total capacity (to cover a disconnection or outage in certain parts of the Network). When the free space drops below 30 percent of the total capacity, the farming_rate will go up and more Farming Attempts will succeed. This way Farmers make more money providing chunks to the Network. It works the other way around as well. When there are too many Farmers providing storage space the farming_rate will go down. This happens automatically, and the effect is to create an incentive for farmers to provide storage when the overall spare capacity is low, and a disincentive when the amount of free space is high.&nbsp;</p>
         <div className="What-does-that-mean">
@@ -33,7 +33,7 @@ const component = () => (
 
         <p>MaidSafeCoin - a cryptocurrency token currently available for purchase that will be exchangeable for Safecoin once the network is live.</p>
 
-            <p>Proof of Resource&nbsp; - 1. a test whether a Vault that wants to join the network has sufficient bandwidth and CPU power. If it fails the test it will not be allowed to join. 2. Random checks are occasionally made by managing nodes to ensure that the Vault is indeed maintaining chunks it is supposed to be storing. If it fails the challenge (by not providing the demanded proof) its Node Age is diminished.</p>
+            <p>Proof of Resource&nbsp; - 1. a test of whether a Vault that wants to join the network has sufficient bandwidth and CPU power. If it fails the test it will not be allowed to join. 2. Random checks are occasionally made by Elders to ensure that the Vault is indeed maintaining chunks it is supposed to be storing. If it fails the challenge (by not providing the demanded proof) its Node Age is diminished.</p>
             </div>
         <div className="Full-width-pic" align="center">
 
@@ -45,12 +45,12 @@ const component = () => (
 
         <p>The Network will balance itself in a way that's completely independent of the price of Safecoin. By adjusting the farming_rate according to the amount of free available space on the Network users storing data are charged at the optimum rate. While the storing rate is high (available free space is lower) users are discouraged from storing thus helping to free up more space. This dynamic pricing should translate into very competitive prices for data storage.</p>
    
-        <p>Everyone with a suitable device and sufficient bandwidth is welcome to farm and thereby contribute to the network - including data centre owners. Nodes are continuously rewarded according to the quality of the resource they provide using Node Age, PARSEC and other features collectively known as Proof of Resource. To minimize the risk of centralization, however, the use of huge farming rigs will be economically disadvantageous compared with running multiple smaller nodes.</p>
+        <p>Everyone with a suitable device and sufficient bandwidth is welcome to farm and thereby contribute to the network - including data centre owners. Nodes are continuously rewarded according to the quality of the resource they provide using Node Age and other features collectively known as Proof of Resource. To minimize the risk of centralization, however, the use of huge farming rigs will be economically disadvantageous compared with running multiple smaller nodes.</p>
         <div className="Pullquote">
             "There's more incentive for Farmers to provide storage when the overall spare capacity is low, and less incentive when the amount of free space is high"
                 </div>
 
-        <p>While it cannot be guaranteed, the indications are that bandwidth and storage capacity will continue to increase rapidly for the next decade or two. This means that data will never&nbsp;have to be deleted, with all information stored indefinitely for the foreseeable future.&nbsp;&nbsp;</p>
+        <p>While it cannot be guaranteed, the signs are that bandwidth and storage capacity will continue to increase rapidly for the next decade or two. This means that data will never&nbsp;have to be deleted, with all public information stored for the foreseeable future.&nbsp;&nbsp;</p>
 
         <div className="Full-width-pic" align="center">
 

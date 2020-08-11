@@ -14,7 +14,7 @@ const component = () => (
 
         <p>The existing Internet is formed of servers and clients. Clients request data and servers provide it. When you browse the Web, you enter the address of the page into the browser (client software) and the browser requests data from the website in question which is stored on a specific server (server software).</p>
 
-        <p>The SAFE Network does not use a client-server model. Instead the data resides across a network made up from the spare computing resources of its users. When a request for data is made, a message goes out across the network and machines that hold the chunks that make up the required data returns them to the requester.</p>
+        <p>The SAFE Network does not use a client-server model. Instead the data resides across a network that's made up of the spare computing resources of its users. When a request for data is made, a message goes out across the Network and machines that hold the chunks that make up the required data return them to the requester.</p>
 
         <p>SAFE has two basic components: Vaults and Clients.</p>
 
@@ -22,7 +22,8 @@ const component = () => (
 
         <h3>Keep it simple!</h3>
 
-            <p>The SAFE Network is comprised of its users' machines (nodes) linked together by Vault software which routes data and messages securely between them. These machines provide the Network's storage by allocating a portion of their hard drives for this purpose &ndash; and earning the Safecoin currency in return. However, you don't have to run a Vault to use the Network any more than you have to run a web server to use the Web. Client software allows users to login, store data and browse the SAFE web securely and anonymously without being part of the Network. A computer can run both Vault and Client software at the same time.&nbsp;&nbsp; </p>
+            <p>The SAFE Network is comprised of its users' machines (nodes) linked together by Vault software which routes data and messages securely between them. These machines provide the Network's storage by allocating a portion of their hard drives for this purpose &ndash; and earning the Safecoin currency in return.</p>
+            <p>However, you don't have to run a Vault to use the Network any more than you have to run a web server to use the Web. Client software allows users to login, store data and browse the SAFE web securely and anonymously without being part of the Network. A computer can run both Vault and Client software at the same time.&nbsp;&nbsp; </p>
         </div>
 
 
@@ -44,7 +45,9 @@ const component = () => (
 
         <p>SAFE Browser &ndash; a browser for surfing the SAFE web.</p>
 
-        <p>Authenticator - enables users to create an account and login without going via a server (Self-Authentication) and also to approve or deny access to their data by apps.</p>
+            <p>Authenticator - enables users to create a Network account and login without going via a server (Self-Authentication) and also to approve or deny access to their data by apps.</p>
+            <p>CLI - command line interface for typing commands into a terminal rather than using a GUI.</p>
+            <p>SAFE Network App - A desktop app for managing SAFE Network applications.</p>
 
         <p>Self-Authentication - a feature that enables a user to create an account and log into the decentralized Network securely and anonymously without any central server to mediate the login process.</p>
 
@@ -54,17 +57,17 @@ const component = () => (
 
         </div>
 
-        <p>The forming, merging and splitting of Sections happens in a fully autonomous way as computers join and leave the Network. The same goes for the routing of chunks across the Network. There are no central servers or agents needed to form this Network (unlike, say, like BitTorrent which uses trackers). Instead, the Vaults follow a set of strict rules to create and maintain the Network, requiring no central authority to do so.</p>
+        <p>The forming and merging of Sections happens in a fully autonomous way as computers join and leave the Network. The same goes for the routing of chunks across the Network. There are no central servers or agents needed to form this Network (unlike, say, like BitTorrent which uses trackers). Instead, the Vaults follow a set of strict rules to create and maintain the Network, requiring no central authority to do so.</p>
 
-        <p>Vaults have several different functions to fulfil. They route and store chunks of data; they cryptographically check messages; they cluster into collections of nodes that will manage certain Sections of the Network; they make decisions about what should and should not happen, such as whether a new Vault should be allowed to join the Network. These responsibilities are divided between two separate &lsquo;personas&rsquo; the Client Manager and the Data Manager (See Chapter 9).</p>
+        <p>Vaults fulfil several different functions. They route and store chunks of data; they cryptographically check messages; they cluster into collections of nodes that will manage certain Sections of the Network; they make decisions about what should and should not happen, such as whether a new Vault should be allowed to join the Network. These responsibilities are divided between two separate &lsquo;personas&rsquo; the Client Manager and the Data Manager (See Chapter 9).</p>
 
         <p>Running a Vault in the SAFE Network is called Farming because users look after the data until it is needed, at which point they may earn payment for their efforts (see Chapter 8).</p>
 
         <h3>The Client</h3>
 
-        <p>Just as you don&rsquo;t need to run a web server to use the Web, you don&rsquo;t have to run a Vault to access the SAFE Network. Ordinary users interact with the network via the Client. Currently the Client is comprised of the SAFE Browser, the Authenticator, and, optionally, a command line interface (CLI) tool. The Authenticator is bundled with the Browser and is also available as a standalone application. The Browser and Authenticator support Windows, OSX, Linux, Android and iOS, whereas the SAFE CLI supports Windows, OSX and Linux.</p>
+        <p>Just as you don&rsquo;t need to run a web server to use the Web, so you don&rsquo;t have to run a Vault to access the SAFE Network. Ordinary users interact with the network via the Client. Currently the Client is comprised of the SAFE Browser, the Authenticator, and, optionally, a command line interface (CLI) tool. The Authenticator is bundled with the Browser and is also available as a standalone application. The entire system is included in the SAFE Network App, which bundles everthing needed to create an account and use the network with a user-friendly UI. The Browser and Authenticator and App support Windows, OSX, Linux, Android and iOS, whereas the SAFE CLI supports Windows, OSX and Linux.</p>
 
-        <p>Self-Authentication is a key innovation of the Network. At no point does the Network ever store a user&rsquo;s password. Therefore, there is no chance of that password being attacked on the Network. Instead, the Authenticator allows a user to create an account and log into a decentralized network securely and anonymously without requiring any central server to mediate the login process, or any trusted third party to store and manage users&rsquo; credentials. With Self-Authentication, the user generates his or her own credentials which are stored on the SAFE Network in such a way that they are cryptographically obfuscated from all other parts of the Network.</p>
+        <p>Self-Authentication is a key innovation of the Network. At no point does the Network ever store a user&rsquo;s password. Therefore, there is no chance of that password being attacked on the Network. Instead, the Authenticator allows a user to create an account and log into the decentralized network securely and anonymously without requiring any central server to mediate the login process, or any trusted third party to store and manage users&rsquo; credentials. With Self-Authentication, the user generates his or her own credentials which are stored on the SAFE Network in such a way that they are cryptographically obscured from all other parts of the Network.</p>
 
         <p>Because users control their own data, Decentralized Applications (DApps) such as the SAFE Browser, require the user to authorize them to manipulate their data. For the user, the authorization process is simply a matter of clicking a button.</p>
 
@@ -81,9 +84,10 @@ const component = () => (
         <p><a href="http://docs.maidsafe.net/Whitepapers/pdf/AutonomousNetwork.pdf">Autonomous Network (MaidSafe whitepaper)</a></p>
         <p><a href="https://github.com/maidsafe/safe_vault">An Implementation of a SAFE Network Vault (Github)</a></p>
         <p><a href="https://github.com/maidsafe/safe_client_libs">SAFE Client libraries (Github)</a></p>
+        <p><a href="https://github.com/maidsafe/safe-network-app">SAFE Network App (Github)</a></p>
         <p><a href="https://github.com/maidsafe/safe_browser">SAFE Browser (Github)</a></p>
 		<p><a href="https://github.com/maidsafe/safe_browser">SAFE Mobile Browser (Github)</a></p>
-        <p><a href="https://github.com/maidsafe/safe-cli">SAFE CLI -  a CLI (Command Line Interface) for the SAFE Network (Github)</a></p>
+        <p><a href="https://github.com/maidsafe/safe-api/blob/master/safe-cli/README.md">SAFE CLI User Guide -  a CLI (Command Line Interface) for the SAFE Network (Github)</a></p>
 		<p><a href="https://github.com/maidsafe/safe_client_libs/tree/master/safe_authenticator">SAFE Authenticator library for interfacing with Authenticator frontend (Github)</a></p>
 		<p><a href="https://github.com/maidsafe/safe-authenticator-cli">SAFE Authenticator CLI(Github)</a></p>
 		

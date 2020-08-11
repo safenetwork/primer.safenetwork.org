@@ -13,11 +13,11 @@ const component = () => (
 
      
 
-        <p>To enable Secure Access For Everyone, SAFE is an &lsquo;autonomous data network&rsquo;. This means it is capable of networking and storage tasks like managing and optimizing workloads, routing, failover, authentication, access control and others without any human intervention. Opportunities for powerful groups to aggregate control or forbid access are minimized.</p>
+        <p>To enable Secure Access For Everyone, SAFE is an &lsquo;autonomous data network&rsquo;. This means it is capable of performing networking and storage tasks such as managing and optimizing workloads, routing, failover, authentication and access control without any human intervention. Opportunities for powerful groups to aggregate control or forbid access are minimized.</p>
 
        
 
-        <p>SAFE infrastructure is not defined by a set of federated servers, VMs, owned storage locations or identifiable nodes - unlike the current Internet. Unlike blockchains, it is designed to store and manage live data rather than pointers to data and to transact in real-time. And unlike BitTorrent, it does not rely on centralized components of the Web to locate and track files.</p>
+        <p>Unlike the current Internet, SAFE infrastructure is not defined by a set of federated servers, VMs, owned storage locations or identifiable nodes. Unlike blockchains, it is designed to store and manage live data rather than pointers to data and to transact in real-time. And unlike BitTorrent, it does not rely on centralized components of the Web to locate and track files.</p>
 
    
 
@@ -58,7 +58,7 @@ const component = () => (
 
         <p>Routing is based on an algorithm that extends Kademlia DHT routing (see Chapter 4). It uses 32-byte (256 bit) XOR addresses to locate data on the network. It is mathematically guaranteed that messages can be routed from any part of the network to any other destination.</p>
 
-        <p>Routing works purely on the terms of Group Consensus (see Chapter 4). We don&rsquo;t trust a single entity, only a group decision with eventual consistency. In order to come to this eventual consistency, the routing layer uses the consensus mechanism PARSEC (See Chapter 7).</p>
+        <p>Routing works on the principle of Group Consensus (see Chapter 4). We don&rsquo;t trust a single entity, only a group decision with strong eventual consistency. In order to guarantee strong consistency, the routing layer uses conflict-free replicated data types (CRDTs) and the asynchronous trusted transfers (AT2) algorithm recently developed at Swiss University Ecole Polytechnique F&eacute;d&eacute;rale de Lausanne (See Chapter 7).</p>
 
         <p>Vaults and Clients provide the main means for users to interact with the Network, either by providing resources in return for payment by running a Vault or by storing data and browsing the SAFE web using the Client. They are discussed further in the next chapter.</p>
 
