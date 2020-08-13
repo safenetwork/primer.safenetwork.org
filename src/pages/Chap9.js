@@ -7,7 +7,7 @@ const component = () => (
 
     <div className='chapter'>
         <h2 id='ch9'>9. Vault personas</h2>
-        <p>The Vaults that form the SAFE Network have different functions to fulfil. They route and store chunks of data. They cryptographically check messages and split into new groups or merge back if their group is becoming too small. They also take on more defined roles which are called personas.</p>
+        <p>The Vaults that form the SAFE Network have different functions to fulfil. They route and store chunks of data. They cryptographically check messages and split into new Sections if theirs becoms too large. They also take on more defined roles which are called personas.</p>
 
         <h3>The Client Manager</h3>
         <p>The Client Manager persona holds an account for each Client which is close to it in the Network address space - i.e. in its Section. Each Client account is managed by around eight Vaults (this number may change as the Network is developed).</p>
