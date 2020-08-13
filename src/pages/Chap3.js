@@ -57,7 +57,7 @@ const component = () => (
 
         </div>
 
-        <p>The forming and merging of Sections happens in a fully autonomous way as computers join and leave the Network. The same goes for the routing of chunks across the Network. There are no central servers or agents needed to form this Network (unlike, say, like BitTorrent which uses trackers). Instead, the Vaults follow a set of strict rules to create and maintain the Network, requiring no central authority to do so.</p>
+        <p>The forming and splitting of Sections happens in a fully autonomous way as computers join and leave the Network. The same goes for the routing of chunks across the Network. There are no central servers or agents needed to form this Network (unlike, say, like BitTorrent which uses trackers). Instead, the Vaults follow a set of strict rules to create and maintain the Network, requiring no central authority to do so.</p>
 
         <p>Vaults fulfil several different functions. They route and store chunks of data; they cryptographically check messages; they cluster into collections of nodes that will manage certain Sections of the Network; they make decisions about what should and should not happen, such as whether a new Vault should be allowed to join the Network. These responsibilities are divided between two separate &lsquo;personas&rsquo; the Client Manager and the Data Manager (See Chapter 9).</p>
 
