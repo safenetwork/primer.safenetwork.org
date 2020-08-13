@@ -16,7 +16,6 @@ const component = (prop) => (
                     <li>Data Chain replaced with SectionProofChain</li>
                 <li>Implementation of conflict-free data types (CRDTs)</li>
                 <li>Implementation of asynchronous trustworthy transfers (AT2) allowing deprecation of PARSEC consensus algorithm </li>
-                    <li>Implementation of SectionProofChains and deprecation of Data Chains </li>
                     <li>New data types Map, Sequence and Blob replace MutableData, AppendOnlyData and ImmutableData</li>
 
             </ul>
