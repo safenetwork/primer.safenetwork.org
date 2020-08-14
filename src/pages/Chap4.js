@@ -49,7 +49,7 @@ const Chap4 = () => (
         <h3>Consensus and quorum</h3>
         <p>The nodes (Vaults) managing a Section must reach a consensus among themselves on Network events under their control before they can happen. They also &lsquo;group sign&rsquo; messages that travel over the wider Network. Elders in Sections recieving these messages need to be sure they are from from valid Sections. Because Section membership is fluid, every time it changes (Elder churn) a new public key is created and signed by the current Elders using the previous key. This series of public keys, each signed by the previous one is called a SectionProofChain and serves to prove the validity of the Section (See BLS-DKG, Lazy Section Updates, Chapter 7). </p>
 
-        <p>Previous iterations of the Network used a more complex arrangement called Data Chains which recorded both the storage of the data and the chain of authorization. SectionProofChains allow Section authority to be baked into the data management process, with a simple record of decentralized record of which sections signed which data, effectively replacing the old Data Chains.</p>
+        <p>Previous iterations of the Network used a more complex arrangement called Data Chains which recorded both the storage of the data and the chain of authorization. SectionProofChains allow Section authority to be baked into the data management process, providing a simple decentralized record of which Section signed which data.</p>
 
         <div className="Keep-it-simple">
             <h3>Keep it simple!</h3>
