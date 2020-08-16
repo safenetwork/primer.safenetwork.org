@@ -8,17 +8,18 @@ const component = () => (
 
     <div className='chapter'>
         <h2 id='ch10'>10. Data types</h2>
-        <p>The SAFE Network provides three main data types for storing and retrieving data: Map,  Sequence and Blob. Map and Sequence are both mutable data types, meaning their content can be changed, whereas Blobs are immutable. Map and Sequence types are being constituted as CRDTs, meaning that operations on mutable data will be guaranteed to copies wherever they are held (see Chapter 7).</p>
+        <p>The SAFE Network provides three main data types for storing and retrieving data: Map, Sequence and Blob. Map and Sequence are both mutable data types, meaning their content can be changed, whereas Blobs are immutable. Map and Sequence types are being constituted as CRDTs, meaning that operations on mutable data will be guaranteed to be replicated to all copies of that data, wherever they are held (see Chapter 7).</p>
         <p>There are some sub-categories too. On the SAFE Network data can be either 'Public' or 'Private'. Private data can only be accessed by its owner, or others that he or she chooses to share it with, and it can also be deleted. Public data is available to anyone, just as a normal website is today, but it cannot be deleted. This is because the Perpetual Web is a fundamental concept of the SAFE Network and public data cannot be erased. </p>
         <p></p>
         <h3>Map</h3>
-        <p>A Map is composed of entries. An entry is a key-value pair (e.g. key 123: value apple) and a Map is effectively a kind of key-value store. The value attached to a particular key can be changed, for example, you might decide you prefer bananas to apples, but apple and any other values previously associated with that key will be kept as a historical record. Only in the case of a PrivateMap can that information, or indeed a whole file, be permanently deleted. </p>
+        <p>A Map is composed of entries. An entry is a key-value pair (e.g. key 123: value apple) and a Map is effectively a kind of key-value store. The value attached to a particular key can be changed, for example, you might decide you prefer bananas to apples, but apple and any other values previously associated with that key will be kept as a historical record. Only in the case of a PrivateMap can that information, or indeed the whole file, be permanently deleted. </p>
 
-        <p>Entries in a Map can be inserted, updated and deleted. In a PrivateMap they can be hard-updated (replacing the current entry rather than appending a new current entry on top of it), deleted or hard-deleted (erasing the entry completely) too, and the entire Map can also be deleted from the Network. Entries in a PublicMap cannot be hard-deleted or hard-updated as that would involve removing data. Every time an operation is performed on a Map, its version number increases by 1.</p>
+        <p>Entries in a Map can be inserted, updated and deleted. In a PrivateMap they can be hard-updated (replacing the current entry rather than appending a new current entry on top of it) or hard-deleted (erasing the entry completely) too, and the entire Map can also be deleted from the Network. Entries in a PublicMap cannot be hard-deleted or hard-updated as that would involve removing data.</p> 
+        <p>Every time an operation is performed on a Map, its version number increases by 1.</p>
         <p>A Map would be an ideal choice for storing and rapid access of data related to a unique ID, such as account information.</p>
 
         <h3>Sequence</h3>
-        <p>A Sequence is an append-only data type in which the data is not associated with keys. Changes to the data will result in a new version - but you can’t edit or delete the existing ones. (In the case of a PrivateSequence the whole Sequence can be deleted, but not individual versions contained within it).</p>
+        <p>A Sequence is an append-only data type in which the data is not associated with keys. Changes to the data will result in a new version - but you can’t edit or delete the existing versions. (In the case of a PrivateSequence, the whole Sequence can be deleted, but not individual versions contained within it).</p>
 
         <p>A Sequence-based document can be updated or corrected an unlimited number of times, but the original version(s) will always be accessible. This is similar to the Internet Archive's Wayback Machine which records websites at regular intervals so you can dial back to see content from the past, even though the site owners may have deleted it long ago. All public SAFE sites will have this capability automatically.</p>
 
@@ -27,7 +28,7 @@ const component = () => (
         <p>A Blob is an immutable data structure. Its Network address is derived from the hash of its content. This means the file cannot be edited in any way after it has been uploaded - any change would alter the hash and therefore its address meaning it could not be found. A single Blob is limited to 1 MB, but by using a Data Map to keep track of their locations files larger than 3 Kb can be split into chunks with those chunks stored as separate Blobs (see Chapter 6).</p>
         <p>Data deduplication is a unique feature of the SAFE Network and a side benefit of the process of Self-Encryption (see Chapter 6). Two identical Blobs will have the same hash value, and therefore only one (plus a few copies for redundancy) need be stored on the Network.</p>
         <p>Blobs can be Public or Private. A PrivateBlob can only be shared with other parties if they are factored in at the time it is created. This is because the Blob's Network address is a hash of its content plus the IDs of accounts that can access it. Adding a new account would thus change its address and is therefore not possible.</p> 
-        <p>Blobs can be cached by Clients and fetching the same chunk next time can be quicker. SAFE also has a planned feature called Opportunistic Caching in which more copies of popular data are created closer to where it is being requested, so popular websites and other data feeds will actually speed up as they get more visitors, rather than slowing down as they do on today's Web.</p>
+        <p>Blobs can be cached by Clients, and fetching the same chunk next time can be quicker. SAFE also has a planned feature called Opportunistic Caching in which more copies of popular data are created closer to where it is being requested, so popular websites and other data feeds will actually speed up as they get more visitors, rather than slowing down as they do on today's Web.</p>
         <p>Use cases for Blobs include images, videos and documents that must not be altered.</p>
        
         <div className="Full-width-pic" align="center">
@@ -36,7 +37,7 @@ const component = () => (
         </div>
         <p><em>Source: MaidSafe</em></p>
         <h3>Public or Private?</h3>
-        <p>All data types can be either Public (available to everyone) or Private (available only to the owner and approved third parties), analogous to the distinction between the public feed and private messaging on social media. Private data is encrypted by default, including in transit. </p>
+        <p>All data types can be either Public (available to everyone) or Private (available only to the owner and approved third parties), analogous to the distinction between the public feed and private messaging on social media sites. Private data is encrypted by default, including in transit. </p>
 
         <div className="What-does-that-mean">
             <h3>What does that mean?</h3>
@@ -54,12 +55,12 @@ const component = () => (
             <p>Opportunistic Caching - automatic creation of more copies of popular data close to where it is being requested, so popular websites and other data feeds will actually speed up as they get more visitors, rather than slow down as they do on today's web.</p>
         </div>
         <h3>Concurrency control</h3>
-        <p>Map and Sequence types offer the ability to control how changes are made to a file when multiple people or processes might be writing to it at the same time (concurrency). Since each change results in a new version concurrency can lead to unpredictable results. For these use cases an optional concurrency check may be selected to ensure that only the expected version can be updated.</p>
+        <p>Map and Sequence types offer the ability to control how changes are made to a file when multiple people or processes might be writing to it at the same time (concurrency). Since each change results in a new version, concurrency can lead to unpredictable results. For these use cases an optional concurrency check may be selected to ensure that only the expected version can be updated.</p>
 
         <h3>Network File Storage</h3>
 
-        <p>Data is saved using a combination of Map and Blob to create an emulated file system on top of the Network called NFS (Network File Storage). NFS saves a file's content as a Blob. It then creates an entry in a FilesContainer, a Map entity, with the file name as the entry's key and the Blob's address as the entry's value. The file can be updated by uploading a new Blob and then altering the file's address in the FileContainer structure to point to the new instance. </p>
-        <p>At time of writing, investigations into the use of a CDRT-tree data type as the basis for a locally mountable filesystem wer ongoing, along with community efforts to create a locally mountable filesystem based on FUSE (filesystem in userspace).</p>
+        <p>Data is saved using a combination of Map and Blob to create an emulated file system on top of the Network called NFS (Network File Storage). NFS saves a file's content as a Blob. It then creates an entry in a FilesContainer, a Map entity, with the file name as the entry's key and the Blob's address as the entry's value. The file can be updated by uploading a new Blob and then altering the file's address in the FilesContainer structure to point to the new instance. </p>
+        <p>At time of writing, investigations into the use of a CDRT-tree data type as the basis for a locally mountable filesystem were ongoing, and there are community efforts under way to create a locally mountable filesystem based on FUSE (filesystem in userspace).</p>
         <p>Websites on the SAFE Network can be identified using URLs thus: safe://service_name.public_id (e.g. safe://mysite.alice). Working similarly to the familiar Internet Domain Name System (DNS), these human-readable addresses are translated into Network addresses on SAFE using the Name Resolution System (NRS).</p>
         <p>As well as the human-readable SAFE URL provided by NRS, files stored on the Network can also be accessed via their XOR-URL (e.g. safe://a078516207e36aa2371e17750c93276446bdb4867c027035531b89430aa8d3ae2fa4dbb59). This URL is a base-32 encoding of the file&rsquo;s XOR address and (optionally) its MIME type allowing data to be stored and retrieved by applications without reference to the storer&rsquo;s account (see Chapter 11).</p>
         <p>&nbsp;</p>
