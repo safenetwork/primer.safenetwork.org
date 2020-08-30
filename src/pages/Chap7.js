@@ -42,7 +42,7 @@ const Chap7 = () => (
         <p>Malice Detection &ndash;  detecting and ejecting nodes that are acting suspiciously.</p>
      </div>
 
-        <h3>Asynchronous Trusted Transfers (AT2)</h3>
+        <h3>Asynchronous Trustworthy Transfers (AT2)</h3>
         <p>AT2 is a distributed networking ABFT algorithm that guarantees transactions will be completed in a way that's reliably deterministic and strongly consistent. What does that mean in practice? It means cryptocurrency transactions and other simple tokenized exchanges will 'just work' with no risk of doublespend or lost data and no waiting around for nodes to agree.</p>
         <p>Unlike with PoW, simple transactions do not require the entire network to come to a consensus on the ordering of events relative to all others. To authorize a payment, for example, AT2 only requires the payer to prove he or she has the required funds as verified by a sufficient number of third parties (a quorum or a random sample large of nodes enough to overcome possible Byzantine behaviour). These third parties check the chain of transactions in the payer's account and provided the balance is sufficient will approve the transfer. Security protections, such as Sybil resistance, are built into the algorithm which is able to recognize deviations from normal behaviour.   </p>
 
