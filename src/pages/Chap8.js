@@ -42,7 +42,7 @@ const component = () => (
   
 
    
-
+        <p><em>Proof of Resource. Note: Safecoin is now called Safe Network Token.</em></p>
         <p>The Network will balance itself in a way that's completely independent of the price of Safe Network Token. By adjusting the farming_rate according to the amount of free available space on the Network users storing data are charged at the optimum rate. While the storing rate is high (available free space is lower) users are discouraged from storing thus helping to free up more space. This dynamic pricing should translate into very competitive prices for data storage.</p>
    
         <p>Everyone with a suitable device and sufficient bandwidth is welcome to farm and thereby contribute to the network - including data centre owners. Nodes are continuously rewarded according to the quality of the resource they provide using Node Age and other features collectively known as Proof of Resource. To minimize the risk of centralization, however, the use of huge farming rigs will be economically disadvantageous compared with running multiple smaller nodes.</p>
