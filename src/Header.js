@@ -3,7 +3,7 @@ import React from 'react';
 const component = (prop) => (
     <div>
     <div className='header' align={ 'center' }>
-        <h1>The SAFE Network Primer</h1>
+        <h1>The Safe Network Primer</h1>
 <p><strong>An introductory guide to the world's first fully autonomous data and communications network</strong></p>
         <p>Last update: August 2020</p>
     </div>
