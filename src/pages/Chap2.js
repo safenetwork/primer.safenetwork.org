@@ -44,7 +44,7 @@ const component = () => (
 
             <img className="Img" src={stack} alt="Stack"  align="center" />
         </div>
-
+        <p><em>The Safe Network stack. Note: Vaults are now called Nodes.</em></p>
          
  
 
