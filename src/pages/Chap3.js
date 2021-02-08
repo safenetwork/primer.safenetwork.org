@@ -22,7 +22,7 @@ const component = () => (
 
         <h3>Keep it simple!</h3>
 
-            <p>The Safe Network is comprised of its users' machines (nodes) linked together by Node software which routes data and messages securely between them. These machines provide the Network's storage by allocating a portion of their hard drives for this purpose &ndash; and earning the Safe Network Token currency in return.</p>
+            <p>The Safe Network is comprised of its users' machines (nodes) linked together by Node (formerly called Vault) software which routes data and messages securely between them. These machines provide the Network's storage by allocating a portion of their hard drives for this purpose &ndash; and earning the Safe Network Token currency in return.</p>
             <p>However, you don't have to run a Node to use the Network any more than you have to run a web server to use the Web. Client software allows users to login, store data and browse the Safe web securely and anonymously without being part of the Network. A computer can run both Node and Client software at the same time.&nbsp;&nbsp; </p>
         </div>
 
