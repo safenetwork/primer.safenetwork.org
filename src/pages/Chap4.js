@@ -23,7 +23,7 @@ const Chap4 = () => (
             <p>Group Consensus - when the minimum number of nodes in a Group agree on the validity of events occurring on the Network.</p>
             <p>group_size &ndash; a parameter stipulating the minimum number of nodes that can look after a Section.</p>
             <p>Bootstrapping &ndash; starting up the Safe Network by connecting together a minimum number of nodes. Bootstrapping is also used to describe a new Node joining the Network.</p>
-            <p>Bootstrap node &ndash; a node to which a new node (Node) initially connects. Any Node can potentially be a bootstrap node, so long as its IP address is written in the Node&rsquo;s configuration file, or, for subsequent connections, its cache. </p>
+            <p>Bootstrap node &ndash; a node to which a new Node initially connects. Any Node can potentially be a bootstrap node, so long as its IP address is written in the Node&rsquo;s configuration file, or, for subsequent connections, its cache. </p>
             <p>Hash function &ndash; a function used to map data of arbitrary size to data of fixed size (e.g. a 256-bit string of characters) called a hash. Any change to the original data will result in a completely different hash. Safe uses the SHA-3 hash function.</p>
             <p>SectionProofChain &ndash; a sequence of public keys, each signed by the previous one, that's updated every time an Elder is changed and acts as proof that the Section is valid.</p>
             <p>Sharding &ndash; on Safe Network this refers to the splitting of the Network into individual sections, each managed by a unique Group of Nodes.</p>
