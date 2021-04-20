@@ -37,7 +37,7 @@ const component = () => (
         </div>
         <p><em>Source: MaidSafe</em></p>
         <h3>Public or Private?</h3>
-        <p>All data types can be either Public (available to everyone) or Private (available only to the owner and approved third parties), analogous to the distinction between the public feed and private messaging on social media sites. Private data is encrypted by default, including in transit. </p>
+        <p>All data types can be either Public (available to everyone) or Private (available only to the owner and approved third parties), analogous to the distinction between the public feed and private messaging on social media sites. Data is encrypted by default, including in transit. </p>
 
         <div className="What-does-that-mean">
             <h3>What does that mean?</h3>
