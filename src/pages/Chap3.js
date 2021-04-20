@@ -32,7 +32,8 @@ const component = () => (
 
         <p>The Safe Network is formed of interconnected machines (nodes) running Node software. Node software connects the devices to each other using existing protocols like TCP and UDP, manages data and routes it around the Network. It allows users to store data on their devices, potentially earning Safe Network Token currency in return. This process of providing a service in return for a reward is analogous to Bitcoin mining. On the Safe Network it's called Farming and the people who provide the resources are called Farmers (see Chapter 8).</p>
 
-        <p>Node software is a small executable file that connects the user&rsquo;s machine to the Safe Network, turning it into a routing node and also allocating some disk space for storage. It manages the storage of data chunks on the user&rsquo;s computer and in that way provides storage capacity to the Network. It also routes and caches data chunks (these are encrypted if data is private) over the Network making use of fully encrypted connections to other Nodes. Nodes are clustered logically into small groups, each of which is responsible for looking after the data stored within a certain range of network addresses, called a Section (see Chapter 4).</p>
+        <p>Node software is a small executable file that connects the user&rsquo;s machine to the Safe Network, turning it into a routing node and also allocating some disk space for storage. It manages the storage of data chunks on the user&rsquo;s computer and in that way provides storage capacity to the Network. It also routes and caches data chunks (these are 
+	) over the Network making use of fully encrypted connections to other Nodes. Nodes are clustered logically into small groups, each of which is responsible for looking after the data stored within a certain range of network addresses, called a Section (see Chapter 4).</p>
 
         <div className="What-does-that-mean">
         <h3>What does that mean?</h3>
