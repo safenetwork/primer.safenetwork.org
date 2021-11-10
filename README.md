@@ -10,17 +10,29 @@ Contents
 
     
 Background and fundamentals
+
 A fully autonomous data network
+
 Nodes and Clients
+
 The architecture of the Safe Network
+
 Node Age
+
 Encryption and authentication
+
 Network-wide consensus not required
+
 Safe Network Token and Digital Bearer Certificates
+
 Safe Network Anti-Entropy
+
 Data types
+
 How Safe Network defends against common types of cyberattack
+
 The promise of the Safe Network
+
 
 ## Contributing
 
