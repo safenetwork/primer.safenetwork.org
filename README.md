@@ -8,19 +8,19 @@ The SAFE Network is a secure, decentralized P2P network being developed by [Maid
 
 Contents
 
-    Background and fundamentals
-    A fully autonomous data network
-    Vaults and Clients
-    The architecture of the SAFE Network
-    Node Age
-    Encryption
-    Network-wide consensus not required
-    Farming for Safecoin
-    Vault personas
-    Data types
-    The SAFE API
-    How SAFE Network defends against common types of cyberattack
-    The promise of the SAFE Network
+    
+Background and fundamentals
+A fully autonomous data network
+Nodes and Clients
+The architecture of the Safe Network
+Node Age
+Encryption and authentication
+Network-wide consensus not required
+Safe Network Token and Digital Bearer Certificates
+Safe Network Anti-Entropy
+Data types
+How Safe Network defends against common types of cyberattack
+The promise of the Safe Network
 
 ## Contributing
 
