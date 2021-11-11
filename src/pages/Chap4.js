@@ -44,8 +44,7 @@ const Chap4 = () => (
         <p><em>Each Section (range of XOR addresses) is managed by a group of Nodes. The most trusted Nodes in a Section are called Elders. Elders have voting rights and can also communicate with Elders in other Sections.</em></p>
         <p> Experiments are ongoing to find the optimum number of Nodes per Section, but it will probably be around 100.</p>
         <p>If a particular Section grows significantly in the eyes of the Network, it will split into two smaller Sections. </p>
-        <p>
-            If a Section finds its membership dropping below a certain limit (group_size) then it requests that Nodes be relocated to it earlier or that it has priority for Infant nodes joining the network. Given these balancing mechanisms is extremely unlikely that a Section will become too small (~7 nodes) to be viable.</p>
+        <p>If a Section finds its membership dropping below a certain limit (group_size) then it requests that Nodes be relocated to it earlier or that it has priority for Infant nodes joining the network. Given these balancing mechanisms is extremely unlikely that a Section will become too small (~7 nodes) to be viable.</p>
 
 
    
