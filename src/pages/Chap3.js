@@ -1,5 +1,4 @@
 import React from 'react';
-import app_auth_flow from '../images/app_auth_flow.jpg';
 
 
 
