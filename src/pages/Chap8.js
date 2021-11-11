@@ -92,7 +92,7 @@ The DBC system takes advantage of the sharded nature of the Network to remove th
 </em></ul>
 
 <h4>Reissuing DBCs</h4>
-<p>Unlike cash, DBCs have owners. Also they need to be ‘reissued’ to a payee by a mint before they can be spent. This is to prevent double-spend. Reissuing is the process of checking that the DBC is valid and has not already been spent, and using a hash of the DBC (its output) to create a new DBC, or DBCs: in the reissuing process multiple DBCs can be combined into a new DBC – or several new DBCs – or a single DBC can be reissued as several new DBCs with their values adding up to the total of the original, as in the example below.
+<p>Unlike cash, DBCs have owners. Also they need to be ‘reissued’ to a payee by a mint before they can be spent. This is to prevent double-spend. Reissuing is the process of checking that the DBC is valid and has not already been spent, and using a hash of the DBC (its output) to create a new DBC, or DBCs: in the reissuing process multiple DBCs can be combined into a new DBC – or several new DBCs – or a single DBC can be reissued as several new DBCs with their values adding up to the total of the original.
 </p>
 
 <h4>The Spentbook</h4>
