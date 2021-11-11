@@ -1,38 +1,59 @@
+
 import React from 'react';
 
 
 
 
 const component = () => (
+    <div>
+        <h2 id='ch12'>12. The promise of the Safe Network</h2>
 
-    <div className='chapter'>
-        <h2 id='ch12'>12. How Safe Network defends against common types of cyberattack</h2>
-        <p>Safe Network has an interlocking set of features, each covering the others&rsquo; vulnerabilities. This means that data security on Safe is maximized. While 100 percent security is impossible, this strength-in-depth means that the sort of attacks common on the current web will be much harder to carry out on SAFE.</p>
-        <h3><strong>Features</strong></h3>
-        <p><em>Random address allocation</em><strong> &ndash; </strong>a new node (Node) joining the Network cannot set its own address and thus cannot decide which Section it joins or which data it will be looking after. This prevents an attacker from being able to target a particular Section to add bad nodes. On a random distribution, the attacker would need to control approximately a third of all nodes to launch such an attack (see Chapter 4).</p>
-        <p><em>Nodes are added only as needed -</em> Each Group only accepts a Node if needed, meaning an attacker might have to wait a very long time to get his or her Node accepted. Even after that, a new Node will be moved between Sections before it can become an Elder (see Chapter 5).</p>
-        <p><em>Node ageing</em> - only nodes that have proved their worth over time (Elders) are allowed to vote on the validity of events in a Section. Nodes that do not pull their weight or act as they should will be expelled and/or their Node Age reset to a lower value (see Chapter 5).</p>
-        <p><em>Churn</em> - Nodes are constantly joining or leaving Sections. Membership is fluid.</p>
-        <p><em>Encryption</em> - All data on the Safe Network is protected by several layers of encryption. Even public data is encrypted (in this case the keys are shared to allow others to decrypt it &ndash; see Chapter 6).</p>
-        <p><em>Self-Encryption</em> - files stored on the Network are broken into chunks with each chunk encrypted using its own hash and the hashes of the two previous chunks. These chunks are stored at geographically random locations (the XOR location being the hash of the encrypted chunk) with a number of copies retained for redundancy. Without a Data Map, the chunks cannot be retrieved and decrypted. (Chapter 6).</p>
-        <p><em>XOR Networking</em> - Randomizes the geographical distribution of the chunks. Only someone in possession of the Data Map (i.e. the data owner) can find the chunks and piece them together again to recreate the file. An attacker trying to fake a chunk could not do so as its hash - and therefore its address on the Network - would be different. It could not be used to create a corrupted version of the file (see Chapter 5).</p>
-        <p><em>Self-Authentication</em> - A user can create an account and log into the decentralized Safe Network securely and anonymously without requiring any central server to mediate the login process or any trusted third party to store and manage users&rsquo; credentials (see Chapter 3).</p>
-        <p><em>Anonymization</em> - To retain anonymity, the identity of a Client connecting to the Network must be obfuscated from the nodes that comprise it. For this reason connections between Clients and Nodes in the Safe Network always occur via a Node the IP of which is in the config file. Any Node can perform this role and rather than accepting the config file the user may prefer to connect via a known node of his or her choosing. Thereafter, the initial Node drops the connection and cannot track the Client's activity (see Chapter 4).</p>
-        <p><em>Disjoint Sections</em> - Addresses on the Safe Network are grouped into Sections with each Section looked after by a Group of nodes. Those nodes know everything about the Section for which they are responsible but very little about the rest of the Network. Moreover, the membership of a Section is constantly changing and they will frequently split. So even if an attacker could control a Section his potential for damage would be limited (see Chapter 5).</p>
-        <p><em>BLS-DKG</em> - BLS cryptography (see Chapter 7) allows secure authentication of Sections and multi-signature transactions. </p>
-        <p><em>Malice Detection</em> - The BLS signature scheme allows for the detection of invalid messages. If these reach a certain threshold the node will be demoted. If a node signs a message that is malicious the signature is forwarded to other Elders who can vote to kill the node (see Chapter 7).</p>
-        <h3><strong>Defence against common attacks</strong></h3>
-        <p><em>Sybil attack</em> - In a Sybil attack, the attacker subverts the reputation system of a peer-to-peer network by creating a large number of pseudonymous identities, using them to gain a disproportionately large influence.</p>
-        <p>An attacker owning a large number of nodes (Nodes) could potentially control individual Sections and block actions happening to data in those Sections (GET, PUT, transfer Safe Network Token). However, they would need to control more than a third of the Elders, and remember they cannot choose the Sections they join. Even then, the attacker would only have influence over the fraction of data controlled by the Group it is in (not the whole Network). Also, disrupting an individual&rsquo;s data would be impossible &ndash; the attacker cannot know where it is stored.</p>
-        <p>Someone with enough Nodes could of course bring the Network down (for example by suddenly turning off all their Nodes). But this gets harder very quickly as the Network grows larger. A combination of Node Ageing, churn, rules on joining and the splitting of Sections would make this massively more difficult (and very expensive) on a large network.</p>
-        <p>In addition, there are Malice Detection tests to identify misbehaving nodes.</p>
-        <p><em>Phishing, keylogging etc</em> - these attacks are feasible as the Network cannot protect endpoints. But such an attack would only compromise the user&rsquo;s own data (and that others have allowed the user to see). Using such a compromise as a springboard for a wider attack on a database or whatever would not be possible. This would be of dubious value to an attacker.</p>
-        <p><em>Man in </em><em>the Middle attacks</em> - MitM attacks rely on data being unencrypted or the victim&rsquo;s browser accepting the attacker's certificate instead of the website&rsquo;s certificate. They will not work on SAFE.</p>
-        <p><em>DDoS</em> - exceptionally difficult as there is no single point to attack. The Network will simply reroute around any nodes that are taken down.</p>
-        <p><em>Quantum computing</em> - The encryption used on Safe is &lsquo;quantum resistant&rsquo; (but not &lsquo;quantum proof&rsquo;). But the volume of encrypted packets means that there could only be targeted attempt at decryption, and decentralization makes such targeting difficult.</p>
-        <p><em>Ransomware</em> &ndash;Files are stored in immutable data and cannot be changed, so ransomware could not encrypt it, but it could potentially delete Data Maps or hide them, making data inaccessible.</p>
-     
-        </div>
+
+
+        <p>The Safe Network is still in development. While many features and functionalities have already proven themselves under test conditions others, including Safe Network Token, are still to come.&nbsp; As with any cutting-edge experimental technology, the proof of the pudding is in the eating. But let&rsquo;s assume for a moment that the Network is successful and is widely adopted for various use cases including Internet browsing, IoT connectivity, data security, personal information management, medical records and more.</p>
+
+        <p>What would that world look like? First, most cyber attack strategies deployed today would be dead in the water. DDoS would not work as the Network would simply route around the affected nodes. Viruses and malware would be extremely limited in their depth of penetration. Ransomware would not raise a single dollar. Cyber attacks aimed at disabling national infrastructure or taking control of a driverless car would be extremely hard to pull off. Medical records and other personal data would be ours and ours alone, to share as we see fit. For users there can be a single sign-on to multiple services. XOR networking with opportunistic caching promises faster speeds, data storage should be extremely cheap and the Network will offer high levels of availability. For developers having a single storage architecture to address has the potential to simplify the systems programmer&rsquo;s job. And data deduplication would allow for both simplicity and resource savings.</p>
+
+
+
+        <div className="Pullquote">"There would be a rebalancing of power from the data-haves to the data have-nots"</div>
+
+
+
+        <p>The Internet giants of today would no longer be able to harvest our data without our say so, nor could government spooks eavesdrop over their shoulders. There would be a rebalancing of power from the data-haves to the data have-nots. Censorship would be impossible and data could not be erased. Because the cost of entry will be low and access unrestricted, the ongoing net neutrality debate will end, and neutrality will have won the day.</p>
+
+        <p>People in places with poor or restricted access to information will have those blockers lifted. Some may even make a decent living earning Safe Network Token. New business models based on consent would spring up in a world where data storage and networking and eventually computing power is a commodity, and the world of information will be a much more level playing field.</p>
+
+        <p>Isn&rsquo;t this all a bit idealistic? Well yes of course, but that&rsquo;s the nature of visions. Not everything will work as planned and we need to be hard-headed about that. Techno-utopianism is a dangerous thing. There are both predictable and unpredictable consequences of taking on the status quo, and indeed of deploying any new technology, and not all of them will be positive. Nevertheless, given where we are today, and where we are headed with the IoT, something like the Safe Network is most definitely needed to redress the power imbalance and to secure the data-driven future.</p>
+
+        <h3>Roadmap</h3>
+
+        <p>As with all experimental research-driven projects the rate of progress is unpredictable, and MaidSafe avoid giving hard deadlines. However, there is a roadmap at <a href="https://safenetwork.tech/timeline/">https://safenetwork.tech/timeline/</a> in which the next developments are laid out. The next MVP, Safe Fleming, will allow anyone with a computer and an internet connection to join the Network.</p>
+
+        <h2>About MaidSafe</h2>
+
+
+
+        <p>MaidSafe is a company founded by David Irvine in 2006 with a mission to provide security and privacy for everyone by building a better digital world. This new platform is the Safe Network, which is the world&rsquo;s first autonomous and decentralized data network. The Network is made up of the unused hard drive space, processing power and bandwidth of its users. The Safe Network will include storage, peer-to-peer communications, transactions, Internet functionality and a wide variety of apps to name a few of its features. This paper was written and produced by members of the Safe Network Forum independently of MaidSafe.&nbsp;</p>
+
+        <p>Join the debate at <a href="https://safenetforum.org/">https://safenetforum.org</a>&nbsp;</p>
+
+        <p>Website: <a href="http://www.safenetwork.tech/">www.safenetwork.tech</a></p>
+
+        <p>Developer forum: <a href="http://www.safedev.org/">forum.safedev.org</a></p>
+
+        <p>Developer hub: <a href="https://hub.safedev.org/">https://hub.safedev.org/</a></p>
+
+        <p>Github: <a href="https://github.com/maidsafe">https://github.com/maidsafe</a></p>
+
+        <p>Twitter: <a href="https://twitter.com/maidsafe">https://twitter.com/maidsafe</a></p>
+
+        <p>Twitter: <a href="https://twitter.com/maidsafe">https://twitter.com/safenetworktech</a></p>
+
+        <p>Reddit: <a href="https://reddit.com/r/safenetwork">https://reddit.com/r/safenetwork</a></p>
+
+        <p>Telegram: <a href="https://t.me/safenetwork">https://t.me/safenetwork</a></p> 
+</div>
 );
 
 export default component;

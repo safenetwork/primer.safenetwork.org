@@ -1,6 +1,4 @@
 import React from 'react';
-import xor_url from '../images/xor_url.PNG';
-import api_flow_revised from '../images/api_flow_revised.PNG';
 
 
 
@@ -8,62 +6,32 @@ import api_flow_revised from '../images/api_flow_revised.PNG';
 const component = () => (
 
     <div className='chapter'>
-        <h2 id='ch11'>11. The Safe API</h2>
-        <p>The Safe API is used by developers to interact directly with the Safe Network. It is available to use in JavaScript, Node.js, Java and C#. Apps connecting to the Safe Network are granted different levels of access to data through the API depending on whether they are authorized or not. Apps that are not authorized can only access public data, such as websites. Authorized Apps can access the full range of network functionality.</p>
-
-        <div className="Full-width-pic" align="center">
-
-            <img className="Img1" src={api_flow_revised} alt="API-Flow" align="center" />
-        </div>
-
-        <p>Currently the Safe Network has default containers in which certain types of files are stored. For example, _documents is used to store document-related data; _downloads is the container for downloaded content; _music is the place to store music files, and so on.</p>
-        <p>There are plans to move away from this system to one of Data Labels, a flatter more  flexible structure which should help reduce the issue of data getting siloed in certain applications. Under this scheme a single piece of data can have multiple labels, some applied by default (e.g. Photo) others user-created (Spain, 2019...) or selected from existing ontologies used in the Semantic Web. Each label has its own index so data can easily be processed by apps, and permissions to access and process data can be managed on a per-label basis. The thinking behind this concept is to improve the user experience (UX) around granting permissions, and to make the architecture more exensible.</p>
-
-        <p>Application development for the Safe Network is not that different from any other platform. There are safe_app libraries based on the platform the application is being built on. Node.js, Javascript, Java and C# are best supported at present. Web applications can be built using the DOM API of the Safe Browser and there are libraries for Android and iOS.</p>
-
-        <h3>Authorization</h3>
-        <p>Applications need to be authorized before they can access data on the Network. In a similar way to the familiar OAuth process, the application sends a request using the library for authorization. When the authorization is approved by the user, the application receives a token which is used to connect to the Safe Network. Authorization is achieved via an application call to the Authenticator.</p>
-
-        <p>Authorization is fine grained. An application can create its own container and request access to default containers or other applications&rsquo; containers through the authorization request. READ, WRITE, UPDATE, DELETE, MANAGE permissions can be requested for every container. The API features many methods for allowing apps to interact with and deploy Map, Sequence and Blob data types (see Chapter 10) and to write and retrieve data from the network.</p>
-        <h3>CipherOpt and Crypto APIs</h3>
-        <p>The safe_app library also provides crypto API functions. The safeCipherOpt API provides functions to create different encryption options to be applied while storing the data in the network. Sign key handling APIs were a work in progress at the time of writing.</p>
-        <p>There are three types of CipherOpts:</p>
-        <ul>
-            <li>Plain - Data will not be encrypted.</li>
-            <li>Symmetric - Data is encrypted with a symmetric key.</li>
-            <li>Asymmetric - Data is encrypted using a key pair.</li>
-        </ul>
-
-        <p>The safeCrypto API provides handy cryptographic functions, including hashing and generating key pairs.</p>
-        <h3>DOM API</h3>
-        <p>A web application can communicate with the Safe Network and Authenticator by interacting
-        directly with the Safe Browser&rsquo;s DOM API, i.e. window.safe* functions.</p>
-
-        <p>This API is very similar to the Node.js API, the main difference being that the web application receives handles for each of the objects that are instantiated when interacting with the API, e.g. SAFEApp and MutableData instances. The web app is required to release the handles provided by calling a specific &lsquo;free&rsquo; function on each of the tokens received.</p>
-        <h3>Support for XOR-URLs</h3>
-        <p>The DOM API also allows applications to link or reference any MutableData/ImmutableData on the Network using its XOR-URL. This is a URL based on the file&rsquo;s XOR location on the Network which also contains information about the file&rsquo;s MIME-type so the Safe Browser can fetch a file (say an image) and render it as usual.</p>
-        <p>As shown in the screenshot below, the Safe Browser can decode the XOR-URL to extract the location of the content, content type (if the MIME type is also encoded in the XOR-URL), fetch it, and render it accordingly as it does it with any publicName-URL (i.e. the URLs which make use of the Safe DNS system):</p>
-        <div className="Full-width-pic" align="center">
-
-            <img src={xor_url} alt="XOR-URL" width="100%" align="center" />
-        </div>
-
-        <p><em>Fetching a page using its XOR-URL</em></p>
-        <h3>WebIDs, RDF and SOLID</h3>
-        <p>The Safe DOM API safe_app_nodejs supports WebIDs. These allow users to identify themselves to applications and pass information (for example the location of an inbox) using just a URL. A user may create multiple IDs for different purposes.</p>
-        <p>There is also support for the semantic web&rsquo;s data exchange model Resource Description Framework (RDF) and WebIDs are stored as RDF documents. Supporting RDF makes Safe compatible with Tim Berners-Lee&rsquo;s SOLID project which allows users to store their own personal data in &lsquo;pods&rsquo; independently of the applications that use it. Many apps developed for SOLID should be easily ported to SAFE, and vice versa, and there is potential for the Safe Network to operate as a highly secure platform for pods.</p>
-        <h3>Tell me more...</h3>
-        <p><a title="labels " href="https://safenetforum.org/t/rfc-labelled-data-indexing-and-token-authorisation/30597 " target="_blank" rel="noopener noreferrer" >Labelled Data, Indexing and Token Authorisation (MaidSafe RFC)</a></p>
-        <p><a title="tokens" href="https://safenetforum.org/t/rfc-tokens-updated-and-extracted-from-labels/31096" target="_blank" rel="noopener noreferrer" >Tokens (updated and extracted from labels) (MaidSafe RFC)</a></p>
-        <p><a title="safe_app_nodejs " href="http://docs.maidsafe.net/safe_app_nodejs " target="_blank" rel="noopener noreferrer" >Safe Network Node.js API</a></p>
-        <p><a title="cryptointerface" href="https://docs.maidsafe.net/safe_app_nodejs/cryptointerface" target="_blank" rel="noopener noreferrer" >Crypto API</a></p>
-        <p><a title="cipheroptinterface" href="https://docs.maidsafe.net/safe_app_nodejs/cipheroptinterface" target="_blank" rel="noopener noreferrer" >CipherOpt API</a></p>
-        <p><a title="Auth flow" href="https://github.com/maidsafe/rfcs/blob/master/text/0046-new-auth-flow/0046-new-auth-flow.md" target="_blank" rel="noopener noreferrer" >New Auth Flow (MaidSafe RFC)</a></p>
-        <p><a title="async-safe-core" href="https://github.com/maidsafe/rfcs/blob/master/text/0043-async-safe-core/0043-async-safe-core.md" target="_blank" rel="noopener noreferrer" >Async safe_core (MaidSafe RFC)</a></p>
-        <p><a title="Safe Authenticator Mobile" href="https://github.com/maidsafe/safe-authenticator-mobile" target="_blank" rel="noopener noreferrer" >Safe Authenticator Mobile (Github)</a></p>
-        <p><a title="webids" href="https://medium.com/safenetwork/an-overview-of-webids-and-rdf-data-use-on-safe-a1fa4a319bd5" target="_blank" rel="noopener noreferrer" >An overview of WebIds and RDF data use on Safe (Josh Wilson).</a></p>
-        <p><a title="rdf" href="https://www.w3.org/RDF/" target="_blank" rel="noopener noreferrer" >Resource Description Framework (RDF) &ndash; (W3 documentation)</a></p>
-        <p><a title="Playing it Safe with RDF" href="https://forum.safedev.org/t/playing-it-safe-with-rdf/1889" target="_blank" rel="noopener noreferrer" >Playing it Safe with RDF</a></p>
+        <h2 id='ch11'>11. How Safe Network defends against common types of cyberattack</h2>
+        <p>Safe Network has an interlocking set of features, each covering the others&rsquo; vulnerabilities. This means that data security on Safe is maximized. While 100 percent security is impossible, this strength-in-depth means that the sort of attacks common on the current web will be much harder to carry out on SAFE.</p>
+        <h3><strong>Features</strong></h3>
+        <p><em>Random address allocation</em><strong> &ndash; </strong>a new Node joining the Network cannot set its own address and thus cannot decide which Section it joins or which data it will be looking after. This prevents an attacker from being able to target a particular Section to add bad nodes. On a random distribution, the attacker would need to control approximately a third of all nodes to launch such an attack (see Chapter 4).</p>
+        <p><em>Nodes are added only as needed -</em> Each Section only accepts a Node if needed, meaning an attacker might have to wait a very long time to have its Node accepted. Even after that, a new Node will be moved between Sections before it can become an Elder (see Chapter 5).</p>
+        <p><em>Node ageing</em> - only Nodes that have proved their worth over time (Elders) are allowed to vote on the validity of events in a Section. Nodes that do not pull their weight or act as they will be expelled and/or their Node Age reset to a lower value (see Chapter 5).</p>
+        <p><em>Churn</em> - Nodes are constantly joining or leaving Sections. Membership is fluid.</p>
+        <p><em>Encryption</em> - All data on the Safe Network is protected by several layers of encryption. Even public data is encrypted (in this case the keys are shared to allow others to decrypt it &ndash; see Chapter 6).</p>
+        <p><em>Self-Encryption</em> - content stored on the Network is broken into chunks with each chunk encrypted using its own hash and the hashes of the two previous chunks. These chunks are stored at geographically random locations (the XOR location being the hash of the encrypted chunk) with a number of copies retained for redundancy. Without a Data Map, the chunks cannot be retrieved and decrypted. (Chapter 6).</p>
+        <p><em>XOR Networking</em> - Randomizes the geographical distribution of the chunks. Only someone in possession of the Data Map (i.e. the data owner) can find the chunks and piece them together again to recreate the content. An attacker trying to fake a chunk could not do so as its hash - and therefore its address on the Network - would be different. It could not be used to create a corrupted version of the file (see Chapter 5).</p>
+        <p><em>Self-Authentication</em> - A user can create a Safe securely and anonymously without requiring any central server to mediate the login process or any trusted third party to store and manage users&rsquo; credentials (see Chapter 3).</p>
+        <p><em>Anonymization</em> - To retain anonymity, the identity of a Client connecting to the Network must be obfuscated from the nodes that comprise it. For this reason connections between Clients and Nodes in the Safe Network always occur via a Node the IP of which is in the config file. Any Node can perform this role and rather than accepting the config file the user may prefer to connect via a known node of his or her choosing. Thereafter, the initial Node drops the connection and cannot track the Client's activity (see Chapter 4).</p>
+        <p><em>Disjoint Sections</em> - Addresses on the Safe Network are grouped into Sections with each Section looked after by a group of Nodes. Those Nodes know everything about the Section for which they are responsible but very little about the rest of the Network. Moreover, the membership of a Section is constantly changing and they will frequently split. So even if an attacker could control a Section his potential for damage would be limited (see Chapter 5).</p>
+        <p><em>BLS-DKG</em> - BLS cryptography (see Chapter 7, 8) allows secure authentication of Sections and multi-signature transactions. </p>
+        <p><em>Malice Detection</em> - The BLS signature scheme allows for the detection of invalid messages. If these reach a certain threshold the node will be demoted. If a node signs a message that is malicious the signature is forwarded to other Elders who can vote to kill the Node (see Chapter 7).</p>
+        <h3><strong>Defence against common attacks</strong></h3>
+        <p><em>Sybil attack</em> - In a Sybil attack, the attacker subverts the reputation system of a peer-to-peer network by creating a large number of pseudonymous identities, using them to gain a disproportionately large influence.</p>
+        <p>An attacker owning a large number of Nodes could potentially control individual Sections and block actions happening to data in those Sections (GET, PUT, transfer Safe Network Token). However, they would need to control more than a third of the Elders, and remember they cannot choose the Sections they join. Even then, the attacker would only have influence over the fraction of data controlled by the Group it is in (not the whole Network). Also, disrupting an individual&rsquo;s data would be impossible &ndash; the attacker cannot know where it is stored.</p>
+        <p>Someone with enough Nodes could of course bring the Network down (for example by suddenly turning off all their Nodes). But this gets harder very quickly as the Network grows larger. A combination of Node Ageing, churn, rules on joining and the splitting of Sections would make this massively more difficult (and very expensive) on a large network.</p>
+        <p>In addition, there are Malice Detection tests to identify misbehaving nodes.</p>
+        <p><em>Phishing, keylogging etc</em> - these attacks are feasible as the Network cannot protect endpoints. But such an attack would only compromise the user&rsquo;s own data (and that others have allowed the user to see). Using such a compromise as a springboard for a wider attack on a database or whatever would not be possible. This would be of dubious value to an attacker.</p>
+        <p><em>Man in </em><em>the Middle attacks</em> - MitM attacks rely on data being unencrypted or the victim&rsquo;s browser accepting the attacker's certificate instead of the website&rsquo;s certificate. They will not work on SAFE.</p>
+        <p><em>DDoS</em> - exceptionally difficult as there is no single point to attack. The Network will simply reroute around any nodes that are taken down.</p>
+        <p><em>Quantum computing</em> - The encryption used on Safe is &lsquo;quantum resistant&rsquo; (but not &lsquo;quantum proof&rsquo;). But the volume of encrypted packets means that there could only be targeted attempts at decryption, and decentralization makes such targeting difficult.</p>
+        <p><em>Ransomware</em> &ndash;Files are stored in immutable data and cannot be changed, so ransomware could not encrypt it, but it could potentially delete Data Maps or hide them, making data inaccessible.</p>
+     
         </div>
 );
 
