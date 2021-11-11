@@ -5,23 +5,25 @@ const component = (prop) => (
     <div className='header' align={ 'center' }>
         <h1>The Safe Network Primer</h1>
 <p><strong>An introductory guide to the world's first fully autonomous data and communications network</strong></p>
-        <p>Last update: August 2020</p>
+        <p>Last update: November 2021</p>
     </div>
         <hr />
         <div align={' left '}>
-            <p>Major changes since last update:</p>
+            <p>Major changes since last update:
             <ul>
-                <li>Sections split when they grow large but no longer merge</li>
-                    <li>Arrival of BLS-DKG encryption for authentication and multisig transactions</li>
-                    <li>Data Chain replaced with SectionProofChain</li>
-                <li>Implementation of conflict-free data types (CRDTs)</li>
-                <li>Implementation of asynchronous trustworthy transfers (AT2) allowing deprecation of PARSEC consensus algorithm </li>
-                    <li>New data types Map, Sequence and Blob replace MutableData, AppendOnlyData and ImmutableData</li>
+  
+                    <li>Implementation of Digital Bearer Certificates </li>
+                    <li>Implementation of Anti-Entropy </li>
+                    <li>Implementation of conflict-free data types (CRDTs)</li>
+                    <li>New data CRDT types Register, Multimap</li>
+                    <li>Design for n-of-k user authorization</li>
 
             </ul>
+            </p>
             </div>
         <hr />
      </div>
 );
 
 export default component;
+
