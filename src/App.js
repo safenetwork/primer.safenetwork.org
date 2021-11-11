@@ -9,7 +9,6 @@ import Chap9 from './pages/Chap9';
 import Chap10 from './pages/Chap10';
 import Chap11 from './pages/Chap11';
 import Chap12 from './pages/Chap12';
-import Chap13 from './pages/Chap13';
 import './App.css';
 import Header from './Header';
 import Topbar from './Topbar';
@@ -49,8 +48,7 @@ function App() {
          <Chap11 />
          <Topbar bgcol="#1f3b60" word="" />
          <Chap12 />
-         <Topbar bgcol="#1f3b50" word="" />
-         <Chap13 />
+
     </div>
   );
 }
