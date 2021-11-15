@@ -124,13 +124,7 @@ The DBC system takes advantage of the sharded nature of the Network to remove th
 
         <p><a title="pedersen" href="https://safenetforum.org/t/update-july-29th-2021/35288#pedersen-commitments-and-range-proofs-2" target="_blank" rel="noopener noreferrer" >Pedersen Commitments and Range Proofs (Safe Network Forum)</a></p>
 
-        
-        <p><a title="Safecoin " href="https://safenetwork.tech/safecoin/" target="_blank" rel="noopener noreferrer" >This is Safecoin (Safe Network website)</a> &nbsp;&nbsp;</p>
-
-        <p><a title="Safecoin Implementation" href=" https://github.com/maidsafe/rfcs/blob/master/text/0012-safecoin-implementation/0012-safecoin-implementation.md" target="_blank" rel="noopener noreferrer" >Safecoin Implementation (MaidSafe RFC)</a> &nbsp;</p>
-
-        <p><a title="Farm Attempt " href="https://github.com/maidsafe/rfcs/blob/master/text/ " target="_blank" rel="noopener noreferrer" >Farm Attempt (MaidSafe RFC)</a></p>
-
+  
         
     </div>
 
