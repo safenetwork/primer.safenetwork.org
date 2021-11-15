@@ -16,7 +16,7 @@ const component = (prop) => (
                     <li>Implementation of Anti-Entropy </li>
                     <li>Implementation of conflict-free replicated data types (CRDTs)</li>
                     <li>Move from pay on GET to pay on PUT when remunerating Nodes</li>
-                    <li>New data CRDT types Register, Multimap</li>
+                    <li>New CRDT data types Register, Multimap</li>
                     <li>Design for n-of-k user authorization</li>
 
             </ul>
