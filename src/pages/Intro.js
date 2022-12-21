@@ -12,7 +12,7 @@ const component = () => (
 
 <p>The Network is ‘trustless’, with no central point of control and no single point of failure. With connectivity and security taken care of, the Network is simple from the point of view of developers, with the burden of having to worry about low-level storage, networking, backups and computing resources removed. For people using the Network to store and share data and messages the burden of ensuring the security of precious information would be drastically reduced.</p>
 
-<p>Anyone with a connected device can use the Network to store and retrieve their own data, or access public information on it, and anyone (subject to a resource test) can join the Network as a supplier.</p>
+<p>Anyone with a connected device can use the Network to store and retrieve their own data or access public information on it, and anyone (subject to a resource test) can join the Network as a supplier.</p>
 
 <p>The Safe Network is a platform on which new digital worlds can be constructed.</p>
         <p>This guide outlines how the Safe Network is constructed to achieve these aims. While it is somewhat technical in places, it's intended very much as an overview, and even those with very little technical knowledge should be able to gain a good working understanding of the Safe Network. For those requiring more depth, there are plenty of pointers as to where they can find the relevant information.</p>
