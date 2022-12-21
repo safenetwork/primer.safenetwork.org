@@ -2,7 +2,7 @@ import React from 'react';
 
 const component = () => (
     <div className='intro'>
-        <h2 id='ch0'>A brief introduction</h2>
+        <h2 id='ch0'>A brief introduction</h2> 
   
       <p>Technological progress is a perpetual process of automation and abstraction. Difficult and complex tasks are made simple by software and machines until they are completely taken for granted. Technology moves on, taking down new blockers in the path to progress as it goes. A good example of this is cloud computing, where once complex server administration tasks have been replaced, from the point of view of the consumer, by point-and-click.</p>
 
