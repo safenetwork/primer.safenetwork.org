@@ -133,7 +133,7 @@ const component = () => (
 <p>Near-zero infrastructure costs, and on-demand scaling met automatically by the Network means a low barrier to entry for business, with no restrictions on competition.</p>
 </li>
 </ul>
-<p>&nbsp;</p>
+
 
 
         
