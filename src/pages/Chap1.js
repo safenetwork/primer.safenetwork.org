@@ -43,7 +43,97 @@ const component = () => (
             <p>We expand on these fundamental principles in the chapters that follow. Combined they aim to give all users the freedom to safely store data on the Network, to share information with others securely, to publish websites cheaply and easily and to communicate using secure channels and apps.</p>
 
 
-        <p>For a fuller version of this list see the Safe Network website. <a href="https://safenetwork.tech/fundamentals/">https://safenetwork.tech/fundamentals/</a></p>
+     <!--   <p>For a fuller version of this list see the Safe Network website. <a href="https://safenetwork.tech/fundamentals/">https://safenetwork.tech/fundamentals/</a></p>
+-->
+
+
+
+<h3>Key Features</h3>
+<p>The Safe Protocol creates a decentralized and autonomous data storage layer on the internet through a network of distributed nodes. This is achieved through the employment of a novel consensus mechanism based on a system of Proof-of-Resource, and without a public ledger such as a blockchain.</p>
+<p>The Protocol introduces an innovative monetary system&mdash;incentivise and reward resource contribution, while protecting against malice&mdash;based on Digital Bearer Certificates (DBCs), which provide fast, secure, and private transactions, yet without the need for central mint.</p>
+<p>The resulting Network which the protocol underpins therefore enables the following key features:</p>
+<h4>Data Security</h4>
+<ul>
+<li>
+<p>Any file stored on the Network is split into chunks, and encrypted using hashes of itself; a novel process known as Self-Encryption. Multiple copies of each chunk are created, and these are randomly and evenly globally distributed, for redundancy and speed of access.</p>
+</li>
+<li>
+<p>Connections between Nodes transmitting these chunks are also end-to-end encrypted.</p>
+</li>
+<li>
+<p>Data is stored on the Network in perpetuity.</p>
+</li>
+<li>
+<p>Passwords and credentials never leave the client computer when accessing and decrypting data. And users need only a single set of credentials while interacting with an unlimited number of services, businesses, identities, or contexts of use.</p>
+</li>
+</ul>
+<h4>Privacy</h4>
+<ul>
+<li>
+<p>Zero-Knowledge: The protocol employs multilayered encryption protecting the privacy of users data both during storage and during transit. Nodes cannot determine the content, nor origin of data they hold or transmit, even if it is their own,</p>
+</li>
+<li>
+<p>No tracking: thanks to its various encryption schemes, tracking and surveillance of browsing and data usage patterns&mdash;commonplace business practice on the incumbent web&mdash;is no longer possible. Privacy is by default.</p>
+</li>
+<li>
+<p>Users of the Network have sovereignty over their personal data, and can maintain and control access to it, while still making use of rich and accessible services and software.</p>
+</li>
+<li>
+<p>Passwords and credentials never leave the client computer when accessing and decrypting data. And users need only a single set of credentials while interacting with an unlimited number of services, businesses, identities, or contexts of use.</p>
+</li>
+</ul>
+<h4>Economy</h4>
+<ul>
+<li>
+<p>The native crypto currency&mdash;<a href="#_6zigv9d29idg" data-jzz-gui-player="true"><span style="color: #1155cc;"><span style="text-decoration: underline;">Safe Network Tokens</a> (SNT)&mdash;allows node operators to be automatically rewarded by the Network after reliably storing and serving data when requested.</p>
+</li>
+<li>
+<p>A user wishing to store data pays for storage in SNT at the point of upload at a price automatically determined by the Network based on the available capacity. There are no ongoing costs after this initial payment.</p>
+</li>
+<li>
+<p>Digital Bearer Certificates, on which SNTs are based, allow tokens to be transferred between users at Network speed, with no fees, and also allow for offline transactions.</p>
+</li>
+<li>
+<p>The supply of SNT remains verifiable and auditable.</p>
+</li>
+<li>
+<p>Inbuilt royalty mechanism means that development of the Network and its application ecosystem can be sustainably funded.</p>
+</li>
+</ul>
+<h4>Efficiency</h4>
+<ul>
+<li>
+<p>The Protocol, and the Network as a whole, is designed to make use of under-utilized and otherwise squandered resources of everyday connected devices; creating a common data storage resource that can put to work serving individuals and communities regardless of location.</p>
+</li>
+<li>
+<p>Thanks to the Protocol&rsquo;s design, all files uploaded to the Network are automatically de-duplicated, yet still benefit from the security and performance benefits of replication since a number of copies of each data chunk are always maintained.</p>
+</li>
+<li>
+<p>The consensus mechanism which allows the nodes to come to agreement on network operations&mdash;allowing for malice detection and Byzantine Fault Tolerance&mdash;is based on Proof of Resource: nodes must gain and maintain reputation through directly providing utility to end users. This is designed to prioritise efficiency and eliminate waste when compared to incumbent alternatives such as Proof-of-Work.</p>
+</li>
+<li>
+<p>Unlike blockchain-based solutions, the Network is designed from the ground up for data. Fully and massively scalable.</p>
+</li>
+</ul>
+<h4>Equality</h4>
+<ul>
+<li>
+<p>No human intervention, intermediary, nor third party, is required to access, store, or retrieve data from the Network.</p>
+</li>
+<li>
+<p>Retrieving data from the Network is always free of charge.</p>
+</li>
+<li>
+<p>Net neutrality: Because, thanks to encryption, all data transmitted via the Protocol looks the same, there can be no discrimination between services, types of files, or those making use of them. So no throttling, and no fast-lanes. Net neutrality is inherent to the design.</p>
+</li>
+<li>
+<p>Global accessibility: The Protocol is designed to be accessible and provide the same performance and experience regardless of a user&rsquo;s location.</p>
+</li>
+<li>
+<p>Near-zero infrastructure costs, and on-demand scaling met automatically by the Network means a low barrier to entry for business, with no restrictions on competition.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
 
 
         
