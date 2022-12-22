@@ -1,7 +1,6 @@
 import React from 'react';
 
 
-
 const component = () => (
 
     <div className='chapter'>
@@ -11,11 +10,9 @@ const component = () => (
 
 
 
-<p>The existing Internet is formed of servers and clients. Clients request data and servers provide it. When you browse the Web, you enter the address of the page into the browser (client software) and the browser requests data from the website in question which is stored on a specific server (server software).</p>
-
-<p>The Safe Network does not use a client-server model. Instead stored data is spread across a network made up of the spare computing resources of its users. When a request for some content is made, a message goes out across the Network and machines that hold the constituent parts of that content return them to the requester.</p>
-
-<p>Safe has two basic components: Nodes and Clients.</p>
+<p>The existing Web is formed of servers and clients. Clients request data and servers provide it.</p>
+<p>The Safe Protocol does not use this client-server model. Instead stored data is spread across a network made up of the spare computing resources of contributing users. When a request for some content is made, a message goes out across the Network and machines that hold the constituent parts of that content—the Nodes—return them to the requester, the Client</p>
+<p>So, the Safe Protocol considers two basic components: Nodes and Clients.</p>
 
         <div className="Keep-it-simple">
 
@@ -31,7 +28,7 @@ const component = () => (
 
 <h3>The Node</h3>
 
-<p>The Safe Network is formed of interconnected machines running Node software. Node software connects the devices to each other using existing protocols like TCP and UDP, manages data and routes it around the Network. It allows users to store data on their devices, potentially earning SNT currency in return. This process of providing a service in return for a reward is analogous to Bitcoin mining. On the Safe Network it's called Farming and the people who provide the resources are called Farmers (see Chapter 8).</p>
+<p>The Safe Network is formed of interconnected machines running Node software. Node software connects the devices to each other using existing protocols like TCP and UDP, manages data and routes it around the Network. It allows users to store data on their devices, potentially earning SNT currency in return. This process of providing a service in return for a reward is analogous to Bitcoin mining (see Chapter 8).</p>
 
 <p>Node software is a small executable file that connects the user&rsquo;s machine to the Safe Network, turning it into a routing node and also allocating some disk space for storage. It manages the storage of data chunks on the user&rsquo;s computer and in that way provides storage capacity to the Network. It also routes and caches data chunks (these are encrypted) over the Network via fully encrypted connections to other Nodes. Nodes are clustered logically into small groups, each of which is responsible for looking after the data stored within a certain range of Network addresses, called a Section (see Chapter 4).</p>
 <div className="What-does-that-mean">
@@ -47,11 +44,9 @@ const component = () => (
 
         <p>Safe Browser &ndash; a browser for surfing the Safe web.</p>
 
-            <p>CLI - command line interface for typing commands into a terminal rather than using a GUI.</p>
+        <p>CLI - command line interface for typing commands into a terminal rather than using a GUI.</p>
         
         <p>Self-Authentication - enables secure and anonymous connection to the Network without a central server to mediate the login process.</p>
-
-        <p>Farming &ndash; earning Safe Network Token by providing resources (Storage, Bandwidth, CPU, online time) to the Network</p>
 
         <p>Safe Network Token &ndash; the currency of the Safe Network, earned by storing data, spent by uploading data.</p>
 
@@ -61,7 +56,6 @@ const component = () => (
 
 <p>Nodes fulfil several different functions. They route and store chunks of data; they cryptographically check messages; they cluster into  Sections each of which manage a certain portion of the Network; and they take decisions about what should and should not happen, such as whether a new Node should be allowed to join the Network.</p>
 
-<p>Running a Node in the Safe Network is called Farming because users look after the data until it is needed, at which point they may earn payment for their efforts (see Chapter 8).</p>
 
 <h3>The Client</h3>
 
