@@ -84,7 +84,7 @@ const component = () => (
 <h4>Economy</h4>
 <ul>
 <li>
-<p>The native crypto currency&mdash;<a href="#_6zigv9d29idg" data-jzz-gui-player="true"><span style="color: #1155cc;"><span style="text-decoration: underline;">Safe Network Tokens</a> (SNT)&mdash;allows node operators to be automatically rewarded by the Network after reliably storing and serving data when requested.</p>
+<p>The native crypto currencyspan Safe Network Tokens (SNT) allows node operators to be automatically rewarded by the Network after reliably storing and serving data when requested.</p>
 </li>
 <li>
 <p>A user wishing to store data pays for storage in SNT at the point of upload at a price automatically determined by the Network based on the available capacity. There are no ongoing costs after this initial payment.</p>
