@@ -43,7 +43,7 @@ const component = () => (
             <p>We expand on these fundamental principles in the chapters that follow. Combined they aim to give all users the freedom to safely store data on the Network, to share information with others securely, to publish websites cheaply and easily and to communicate using secure channels and apps.</p>
 
 
-     <p>For a fuller version of this list see the Safe Network website. <a href="https://safenetwork.tech/fundamentals/">https://safenetwork.tech/fundamentals/</a></p>
+     //<p>For a fuller version of this list see the Safe Network website. <a href="https://safenetwork.tech/fundamentals/">https://safenetwork.tech/fundamentals/</a></p>
 
 
 
@@ -84,7 +84,7 @@ const component = () => (
 <h4>Economy</h4>
 <ul>
 <li>
-<p>The native crypto currencyspan Safe Network Tokens (SNT) allows node operators to be automatically rewarded by the Network after reliably storing and serving data when requested.</p>
+<p>The native crypto currency Safe Network Tokens (SNT) allows node operators to be automatically rewarded by the Network after reliably storing and serving data when requested.</p>
 </li>
 <li>
 <p>A user wishing to store data pays for storage in SNT at the point of upload at a price automatically determined by the Network based on the available capacity. There are no ongoing costs after this initial payment.</p>
