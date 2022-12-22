@@ -13,12 +13,9 @@ const component = () => (
 
      
 
-<p>To enable Secure Access For Everyone, Safe is an &lsquo;autonomous data network&rsquo;. This means it is capable of performing networking and storage tasks such as managing and optimizing workloads, routing, failover, authentication and access control without any human intervention. Opportunities for powerful groups to aggregate control or prevent access are minimized.</p>
+<p>The Safe Network can be seen as a secure, encrypted, intelligent layer that sits on top of the current Internet, complementing the top three layers in the OSI model and adding resources in the application layer. </p>
 
-       
-
-<p>Unlike the current Internet, Safe infrastructure is not defined by a set of federated servers, VMs, owned storage locations or identifiable nodes. Unlike blockchains, it is designed to store and manage live data rather than pointers to data and to transact in real-time. And unlike BitTorrent, it does not rely on centralized components of the Web to locate and track files.</p>
-
+<p>Going a little deeper, Safe introduces some changes to the networking and application layers as shown below.</p>
 
 
 <div className="Full-width-pic" align="center">
