@@ -13,10 +13,6 @@ const component = () => (
 
      
 
-<p>The Safe Network can be seen as a secure, encrypted, intelligent layer that sits on top of the current Internet, complementing the top three layers in the OSI model and adding resources in the application layer. </p>
-
-<p>Going a little deeper, Safe introduces some changes to the networking and application layers as shown below.</p>
-
 
 <div className="Full-width-pic" align="center">
     
