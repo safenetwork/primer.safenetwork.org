@@ -25,17 +25,18 @@ const Chap4 = () => (
 			<p>Adults &ndash; Nodes that perform storage duties but do not take decisions (see Chapter 5).</p>    
             <p>Infants &ndash; Nodes waiting to join the Network but not yet accepted.</p>       
             <p>Agreement &ndash;  when the required proportion of decision-making Nodes (Elders - see Chapter 5) in a Section vote an event to be valid.</p>
+            <p>Consensus &ndash;  when enforced order is required Elders may not be able to rely on simple agreement and a formal consensus is required (Chapter 7).</p>            
             <p>group_size &ndash; a parameter stipulating the minimum number of Elders in a Section (currently set at 7).</p>
             <p>Bootstrapping &ndash; starting up the Safe Network by connecting together a minimum number of Nodes. Bootstrapping is also used to describe a new Node joining the Network.</p>
             <p>Bootstrap node &ndash; a node to which a new Node initially connects. Any Node can potentially be a bootstrap node, so long as its IP address is written in the Node&rsquo;s configuration file, or, for subsequent connections, its cache. </p>
             <p>Hash function &ndash; a function used to map data of arbitrary size to data of fixed size (e.g. a 256-bit string of characters) called a hash. Any change to the original data will result in a completely different hash. Safe uses the SHA-3 hash function.</p>
-            <p>SectionChain &ndash; a sequence of public keys, each signed by the previous one, that's updated every time an Elder is changed and acts as proof that the Section is valid.</p>
+            <p>SectionTree &ndash; a record of all Sections' public keys, each signed by the previous one, that's updated every time an Elder is changed and acts as proof that the Section is valid.</p>
             <p>Sharding &ndash; on Safe Network this refers to the splitting of the Network into individual sections, each managed by a unique Group of Nodes.</p>		
         </div>
        <p>Importantly, on joining or rejoining the Safe Network a Node cannot simply pick its own XOR address - in other words, it can&rsquo;t choose the Section it will be part of. Instead, it has to wait to be allocated to a Section that is chosen by the Network. When this occurs, the Node receives the Section's Routing Table and learns the exact unique address range (and therefore the data) that it will be responsible for.</p>
         <p>Content stored on the Safe Network is first broken into chunks, hashed and then encrypted (see Chapter 6). Those chunks are run through a hashing algorithm to create a unique 256-bit hash for each chunk. Only chunks that are exactly identical will have the same hash value. This hash serves as the XOR address on the Network where that chunk will be stored, which in turn determines the Section that will manage it.</p>
         <p>Chunks with hashes that lie within a certain address range (say 000010... to 000011...) will be secured, stored and managed by the Section that is closest (in XOR terms) to that address. The membership of this Section will change over time as new Nodes join and others leave.</p>
-        <p>When the Network starts up, the initial Nodes are responsible for the whole 256-bit address range. But as more Nodes join the Network will split into two Sections. As still more Nodes join, the Sections will continue to split, each managed autonomously by its Elders (Nodes with decision-making powers, see Chapter 5). This is known as &lsquo;Sharding&rsquo; and is a crucial part of the way in which the Network solves the challenges of scalability.</p>
+        <p>When the Network starts up, the initial Nodes are responsible for the whole 256-bit address range. Then as more Nodes join the Network will split into two Sections. As still more Nodes join, the Sections will continue to split, each managed autonomously by its Elders (Nodes with decision-making powers, see Chapter 5). This is known as &lsquo;Sharding&rsquo; and is a crucial part of the way in which the Network solves the challenges of scalability.</p>
         <p className="Pullquote">"The hash of a chunk of data serves as the XOR address on the Network where it will be stored, which in turn determines the Section that will manage it"</p>
         <div className="Full-width-pic" align="center">
 
@@ -44,15 +45,16 @@ const Chap4 = () => (
         <p><em>Each Section (range of XOR addresses) is managed by a group of Nodes. The most trusted Nodes in a Section are called Elders. Elders have voting rights and can also communicate with Elders in other Sections.</em></p>
         <p> Experiments are ongoing to find the optimum number of Nodes per Section, but it will probably be around 100.</p>
         <p>If a particular Section grows significantly in the eyes of the Network, it will split into two smaller Sections. </p>
-        <p>If a Section finds its membership dropping below a certain limit (group_size) then it requests that Nodes be relocated to it earlier or that it has priority for Infant nodes joining the network. Given these balancing mechanisms is extremely unlikely that a Section will become too small (~7 nodes) to be viable.</p>
+        <p>
+            If a Section finds its membership dropping below a certain limit (group_size) then it requests that Nodes be relocated to it earlier or that it has priority for Infant nodes joining the network. Given these balancing mechanisms is extremely unlikely that a Section will become too small (~7 nodes) to be viable.</p>
 
 
    
 
         <h3>Agreement</h3>
-        <p>The Elder Nodes managing a Section must reach consensus among themselves on Network events under their control before they can happen. They also ‘Section-sign’ messages that travel over the wider Network. Elders in Sections receiving these messages need to be sure they are from valid Sections. Because Section membership is fluid, every time it changes (Elder churn) a new public key is created and signed by the current Elders using the previous key. This series of public keys, each signed by the previous one is called a SectionChain and serves to prove the validity of the Section (See BLS-DKG, Anti-Entropy, Chapter 7). </p>
+        <p>The Elder Nodes managing a Section must reach agreement among themselves on Network events under their control before they can happen. They also ‘Section-sign’ messages that travel over the wider Network. Elders in Sections receiving these messages need to be sure they are from valid Sections. Because Section membership is fluid, every time it changes (Elder churn) a new public key is created and signed by the current Elders using the previous key. This series of public keys, each signed by the previous one, is called a SectionTree and serves to prove the validity of the Section (See BLS-DKG, Anti-Entropy, Chapter 7). </p>
 
-        <p>SectionChains allow Section authority to be baked into the data management process, providing a simple decentralized record of which Section signed which data.</p>
+        <p>SectionTrees allow Section authority to be baked into the data management process, providing a simple decentralized record of which Section signed which data.</p>
 
         <div className="Keep-it-simple">
             <h3>Keep it simple!</h3>
@@ -73,7 +75,7 @@ const Chap4 = () => (
         <p><a href="http://docs.maidsafe.net/Whitepapers/pdf/DHTbasedNATTraversal.pdf ">DHT-based NAT Traversal (MaidSafe Whitepaper)</a></p>
         <p><a href="https://en.wikipedia.org/wiki/Disjoint-set_data_structure ">Disjoint-set data structure (Wikipedia)</a></p>
         <p><a href="https://github.com/maidsafe/rfcs/blob/master/text/0037-disjoint-groups/0037-disjoint-groups.md ">Disjoint Sections (MaidSafe RFC)</a></p>
-<p><a href="https://safenetforum.org/t/fast-ephemeral-routing/32173">Fast Ephemeral Routing (RFC and discussion, introduces concept of SectionChains)</a></p> 
+<p><a href="https://safenetforum.org/t/fast-ephemeral-routing/32173">Fast Ephemeral Routing (RFC and discussion, introduces concept of SectionChains - now SectionTrees)</a></p> 
 
        
 
