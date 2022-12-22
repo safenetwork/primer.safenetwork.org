@@ -11,7 +11,9 @@ const component = () => (
     
 <h2 id='ch2'>2. A fully autonomous data network</h2>
 
-     
+<p>The Safe Network can be seen as a secure, encrypted, intelligent layer that sits on top of the current Internet, complementing the top three layers in the OSI model and adding resources in the application layer. </p>
+
+<p>Going a little deeper, Safe introduces some changes to the networking and application layers as shown below.</p>     
 
 
 <div className="Full-width-pic" align="center">
