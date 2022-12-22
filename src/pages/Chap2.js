@@ -55,11 +55,12 @@ const component = () => (
 <p>On the Safe Network, routing works on the principle of group consensus. For actions that mutate data or change the network a supermajority of the group of Nodes responsible for undertaking that action must first agree that it is valid.</p>
 <p> In order to guarantee strong consistency, the Network uses conflict-free replicated data types (CRDTs) for storing data, Byzantine Reliable Broadcast (BRB) for messaging, and Boneh-Lynn-Shacham (BLS) threshold cryptography to reach local consensus (See Chapter 7).</p>
 		
-		<p>Client connections managed by qp2p are mediated via the Client API. Sitting above that, the Safe Network API allows clients such as end user devices and apps to make use of the network, including storing, sharing and reading data. There is a command line interface (CLI) for this purpose, and apps written in Rust can access network functions directly via the API. Apps written in other languages, including the Safe Browser - a JavaScript app, do the same via the language bindings layer. </p> 
+<p>Client connections managed by qp2p are mediated via the Client API. Sitting above that, the Safe Network API allows clients such as end user devices and apps to make use of the network, including storing, sharing and reading data. There is a command line interface (CLI) for this purpose, and apps written in Rust can access network functions directly via the API. Apps written in other languages, including the Safe Browser - a JavaScript app, do the same via the language bindings layer. </p> 
 
-        <p>Nodes and Clients provide the main means for users to interact with the Network, either by providing resources in return for payment by running a Node or by storing data and browsing the Safe web as a Client. They are discussed further in the next chapter.</p>
+<p>Nodes and Clients provide the main means for users to interact with the Network, either by providing resources in return for payment by running a Node or by storing data and browsing the Safe web as a Client. They are discussed further in the next chapter.</p>
 
-        <p>All Safe Network code is open source and licensed under GPLv3.</p>
+<p>All Safe Network code is open source and licensed under GPLv3. The project also makes use of forks of third-party open source repositories with different licences, including MIT, MIT/Apache and BSD-3-Clause.
+</p>
         <h3>Tell me more&hellip;</h3>
 
    
