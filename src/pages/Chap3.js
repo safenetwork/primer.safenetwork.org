@@ -1,6 +1,8 @@
 import React from 'react';
 
 
+
+
 const component = () => (
 
     <div className='chapter'>
@@ -68,11 +70,8 @@ const component = () => (
 <h3>Tell me more...</h3>
 <p><a href="http://www.enterprisenetworkingplanet.com/datacenter/datacenter-blog/on-the-verge-of-autonomous-networking.html">On the Verge of Autonomous Networking (Enterprise Networking Planet)</a></p>
 <p><a href="http://docs.maidsafe.net/Whitepapers/pdf/AutonomousNetwork.pdf">Autonomous Network (MaidSafe whitepaper, 2010)</a></p>
-<p><a href="https://github.com/maidsafe/safe_client_libs">Safe Client libraries (Github)</a></p>
-<p><a href="https://github.com/maidsafe/safe-network-app">Safe Network App (Github)</a></p>
 <p><a href="https://github.com/maidsafe/safe_browser">Safe Browser (Github)</a></p>
-<p><a href="https://github.com/maidsafe/safe_browser">Safe Mobile Browser (Github)</a></p>
-<p><a href="https://github.com/maidsafe/sn_cli#safe-network-cli">Safe CLI User Guide -  a CLI (Command Line Interface) for the Safe Network (Github)</a></p>
+<p><a href="https://github.com/maidsafe/safe_network/tree/main/sn_cli">Safe CLI User Guide -  a CLI (Command Line Interface) for the Safe Network (Github)</a></p>
 
        
     </div>
