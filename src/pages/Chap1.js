@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 
 
 const component = () => (
@@ -29,9 +29,10 @@ const component = () => (
                 <li>Store data in perpetuity. All public/published data on the Network will be immutable and available on the Network indefinitely.</li>
                 <li>Never require passwords to be stored on the Network or on machines used to access the Network.</li>
                 <li>Allow any user, on any machine, to access the Network leaving no trace of their presence or activity on the machine.</li>
-                <li>Scrub Client IP addresses from the first hop. <br />As soon as you have connected to the network, your IP address is wiped.</li>
-                <li>Only accept more Vaults (networked storage provided by users' machines) when it needs them. <br /> This is to prevent a bad actor from flooding the network with poorly performing or malicious Vaults and also to enable the Network to balance its resources automatically according to demand.</li>
-                <li>Increase farming rewards when it needs more resources (e.g. more Vaults to increase storage capacity) and decrease rewards when resources are plentiful. <br />This is the primary mechanism for balancing supply and demand.</li>
+                <li>Obfuscate Client IP addresses.
+                <br />IP addresses are not forwarded with any Client requests </li>
+                <li>Only accept more Nodes (networked storage provided by users' machines) when it needs them. <br /> This is to prevent a bad actor from flooding the Network with poorly performing or malicious Nodes and also to enable the Network to balance its resources automatically according to demand.</li>
+                <li>Increase operator rewards when it needs more resources (e.g. more Nodes to increase storage capacity) and decrease rewards when resources are plentiful. <br />This is the primary mechanism for balancing supply and demand.</li>
                 <li>Rank nodes over time and increase trust in higher ranked nodes.<br />The aim is to maximize performance and defend against certain attacks.</li>
                 <li>Not have servers! <br />The Safe Network will never rely on servers (as the term is traditionally understood) as to do so introduces a third-party weakness that undermines the entire Network.</li>
                 <li>Digitally sign all transactions. <br />To ensure that the transactions have been authorized in accordance with the rules of the Network.</li>
@@ -43,11 +44,11 @@ const component = () => (
             <p>We expand on these fundamental principles in the chapters that follow. Combined they aim to give all users the freedom to safely store data on the Network, to share information with others securely, to publish websites cheaply and easily and to communicate using secure channels and apps.</p>
 
 
-{/*<p>For a fuller version of this list see the Safe Network website. <a href="https://safenetwork.tech/fundamentals/">https://safenetwork.tech/fundamentals/</a></p>*/}
+      {/*  <p>For a fuller version of this list see the Safe Network website. <a href="https://safenetwork.tech/fundamentals/">https://safenetwork.tech/fundamentals/</a></p> */}
 
 
 
-<h3>Key Features</h3>
+      <h3>Key Features</h3>
 <p>The Safe Protocol creates a decentralized and autonomous data storage layer on the internet through a network of distributed nodes. This is achieved through the employment of a novel consensus mechanism based on a system of Proof-of-Resource, and without a public ledger such as a blockchain.</p>
 <p>The Protocol introduces an innovative monetary system&mdash;incentivise and reward resource contribution, while protecting against malice&mdash;based on Digital Bearer Certificates (DBCs), which provide fast, secure, and private transactions, yet without the need for central mint.</p>
 <p>The resulting Network which the protocol underpins therefore enables the following key features:</p>
