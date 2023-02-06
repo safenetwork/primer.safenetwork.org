@@ -81,7 +81,7 @@ const Chap7 = () => (
         <p>At the start of this chapter we mentioned the problem of users sending messages from different places and the difficulty of agreeing their order. With CRDTs it is not necessary to try to enforce an order or agree on it before changes can be applied. If Bob sees Alice's message before Carol's then that's the order that will be replicated around the network. No questions asked. If Bob receives Alice's and Carol's messages at exactly the same time he just picks an order randomly (A-C or C-A) and all replicas will accept that as the correct state.</p>
         <p>CRDTs can range from simple counters to more complex structures, such as documents on which many people collaborate. Because CRDTs follow a strict set of rules based on metadata contained within their structure, conflicts (i.e. the persistence of multiple states of the same data) are automatically avoided without any special code or user intervention required.</p>
         <p>Not every data structure can be a CRDT, but where it's possible it makes the job of ensuring consistency significantly easier. Changes can be made locally to CRDTs in complete confidence that they will be valid whatever may be happening elsewhere. This combines well with the AT2-type process described above: the Client can only request changes to CRDT data that are valid and once these have been approved by a quorum of Elders they cannot fail. Once again, this takes strain off the network.</p> 
-        <p>On the Safe Network mutable data types are being formatted as CRDTs (see Chapter 10).</p>    
+        <p>On the Safe Network all mutable data types are CRDTs (see Chapter 10).</p>    
 
         
         <div className="Keep-it-simple">
@@ -103,7 +103,7 @@ const Chap7 = () => (
 
         <h3>Crash fault tolerance</h3>
 
-        <p>The current design has seven Elders per Section, allowing for two Elders to be Byzantine without being able to affect decisions made. But not all such nodes are actively malicious. More common will be simple failures and crashes. At the time of writing, work was underway to see if the Network could accommodate more malfuntioning nodes by increasing the number of Elders per Section to nine. The Network does not need to know whether a node is faulty or malevolent, but by requiring a simple majority of honest Elders (5 out of 9) rather than a supermajority (5 out of 7) the Network could possibly be made more robust, tolerating a higher proportion of failing nodes without losing functionality. </p>
+        <p>The current design has seven Elders per Section, allowing for two Elders to be Byzantine without being able to affect decisions made. But not all such nodes are actively malicious. More common will be simple failures and crashes. At the time of writing, work was underway to see if the Network could accommodate more malfuntioning nodes by increasing the number of Elders per Section to nine. The Network does not need to know whether a node is faulty or malevolent, but by requiring a simple majority of honest Elders (5 out of 9) rather than a supermajority (5 out of 7) the Network could possibly be made more robust, tolerating a higher proportion of failing nodes without losing functionality. This design would also have larger numbers of nodes per section (60+) for increased Sybil resistance (Chapter 11).</p>
 
  </p> 
    
@@ -126,8 +126,8 @@ const Chap7 = () => (
         <p><a title="VCBC2" href="https://safenetforum.org/t/update-17-november-2022/37691" target="_blank" rel="noopener noreferrer" > Forum post explaining VCBC</a></p>
         <p><a title="CFT" href="https://safehttps://safenetforum.org/t/consensus-async-ae-what-does-it-all-mean-and-where-does-it-matter/37678" target="_blank" rel="noopener noreferrer" > Forum discussion of Byzantine fault tolerance, crash fault tolerance and consensus</a></p>
  
-        
-        
+        <p><a title="Gossip" href="https://safenetforum.org/t/update-29-september-2022/37512" target="_blank" rel="noopener noreferrer" > Forum discussion of gossip and eventual termination.</a></p>
+ 
         
         
         
