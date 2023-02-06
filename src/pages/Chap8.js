@@ -27,7 +27,7 @@ const component = () => (
         <p>These Data Payment fees are immediately redistributed by the Network as follows:</p>
         <ul>
             <li>85% is paid to qualifying node operators as a Resource Supply Reward</li>
-            <li>15% is remitted as Network Royalties</li>
+            <li>14.5% is remitted as Network Royalties</li>
         </ul>
         </p>
 
@@ -67,6 +67,8 @@ const component = () => (
 <img className="Img1" src={earn_snt} alt="POR" align="center" />
 </div>
 
+<h3>Genesis supply</h3>
+<p>At the inception of the Network a Genesis Supply of 1,288,490,189 SNT will be issued. This represents 30% of the Maximum Supply.</p>
 
 <h3>Network Royalties</h3>
 <p>Network Royalties are a mechanism through which software development, services, and data which provide value to people that use the
@@ -88,7 +90,7 @@ Network, benefit wider society, and meet the objectives of the project, can be m
 
         <p>SNT &ndash; Safe Network Token is the Network's currency.</p>
          
-        <p>Maximum Supply &ndash; 4,525,524,120 whole SNT, the maximum number that can be created over the Network’s lifetime.</p>
+        <p>Maximum Supply &ndash;  4,294,967,296 (2^32)  whole SNT, the maximum number that can be created over the Network’s lifetime.</p>
     
 
         <p>Storage Reward Rate - a variable used to attract or discourage Node operators in order to maintain a certain level of free space (about 30 percent of the total capacity).</p>
@@ -119,7 +121,7 @@ Network, benefit wider society, and meet the objectives of the project, can be m
     
 
        
-        <p>There will be a maximum supply of 4,525,524,120 whole SNT created over the Network’s lifetime. Each whole SNT can be subdivided 10<sup>9</sup> times, thus creating a total of 4,525,524,120,000,000,000 available subunits. Safe Network Tokens will be recycled when users exchange them for Network services, which means that there is always a supply for Node operators to earn.</p>
+        <p>There will be a maximum supply of  4,294,967,296 whole SNT created over the Network’s lifetime. Each whole SNT can be subdivided 10<sup>9</sup> times, thus creating a total of 4,294,967,296,000,000,000 available subunits. Safe Network Tokens will be recycled when users exchange them for Network services, which means that there is always a supply for Node operators to earn.</p>
 
         <p>Tokens will be emitted during an upload event and become available to either the Client or Node operator. The number of tokens emitted as the result of each event will be in proportion to the amount of data stored. Emission will continue until the Maximum Supply is reached.</p>
 
@@ -173,6 +175,7 @@ The DBC system takes advantage of the sharded nature of the Network to remove th
         <p><a title="scrit" href="https://github.com/scritcash/scrit-whitepaper/blob/master/scrit-whitepaper.pdf" target="_blank" rel="noopener noreferrer" >Scrit: An Untraceable Distributed Electronic Cash System (Jonathan 'Smuggler' Logan, 2019)</a></p>
 
         <p><a title="pedersen" href="https://safenetforum.org/t/update-july-29th-2021/35288#pedersen-commitments-and-range-proofs-2" target="_blank" rel="noopener noreferrer" >Pedersen Commitments and Range Proofs (Safe Network Forum)</a></p>
+
 
      
         
