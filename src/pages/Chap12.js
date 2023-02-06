@@ -30,6 +30,50 @@ const component = () => (
 
         <p>As with all experimental research-driven projects the rate of progress is unpredictable, and MaidSafe avoid giving hard deadlines. However, there is a roadmap at <a href="https://safenetwork.tech/timeline/">https://safenetwork.tech/timeline/</a> in which the next developments are laid out. The next MVP, Safe Fleming, will allow anyone with a computer and an internet connection to join the Network.</p>
 
+        <h3>Glossary</h3>
+
+        <p>Adult - A Node that has no voting rights but can store data</p>
+        <p>Anti-Entropy - A way of preventing a Section from making changes while its membership is in a state of flux.</p>
+        <p>Boneh-Lynn-Shacham Distributed Key Generation (BLS-DKG) - A cryptographic system that authenticates the sender of a message, allows for multiple parties to quickly come to a consensus, and can enable multi-signature transactions and n-of-k credentials</p>
+        <p>Byzantine Fault Tolerance - The ability of a decentralised network to function properly even if up to a third of the nodes (plus 1) is corrupt or faulty</p>
+        <p>Byzantine Reliable Broadcast - A pattern used by the Safe Protocol that forces the requester to do the work of obtaining authority from the Network before it can make a change</p>
+        <p>Churn - Nodes joining and leaving a Section</p>
+        <p>Client - Software that allows users to connect to the Network and make use of its services</p>
+        <p>Conflict-free Data Types (CRDTs) - Data structures that obey certain mathematical rules which ensure that when multiple versions of data exist across a distributed network, eventually these will always converge onto one ‘true’ version</p>
+        <p>Data Map - A record of content chunks and their corresponding locations on the Network. Only users in possession of the Data Map can recreate the file</p>
+        <p>Data Payment - A one-time payment made upfront for data storage</p>
+        <p>Digital Bearer Certificate (DBC) - A a unique ‘digital voucher’ which has value by virtue of the fact it has been provably issued by a trusted authority as part of an economic system</p>
+        <p>Distributed hash table – a map of where data is stored on a distributed network</p>
+        <p>Elder - A Node with voting rights in its Section. Elders are simply those nodes with the greatest Node Age in the Section – a subset of addresses on the network. The word Section is also applied to a group of Nodes that manage a subset of addresses</p>
+        <p>Genesis Supply - At the inception of the Network 1,288,490,189 will be created. This represents 30% of the Maximum Supply</p>
+        <p>Infant - A Node waiting to be allowed to join the Network</p>
+        <p>MaidSafeCoin - A cryptocurrency token currently available for purchase that will be exchangeable for Safe Network Token once the Network is live</p>
+        <p>Maximum Supply - Total number of whole SNT created over the Network’s lifetime: 4,294,967,296</p>
+        <p>Network Royalties - A mechanism through which software development, services, and data which provide value to people that use Network, benefit wider society, and meet the objectives of the project, can be can be meaningfully rewarded and sustainably funded</p>
+        <p>Network Royalties Pool - 14.5% of the Maximum Supply will be allocated to a Network Royalties Pool and distributed as Network Royalties.</p>
+        <p>Node - A machine that connects with others using the Safe Protocol to form the Network. Nodes can be Infants (waiting to join), Adults (storage providers) or Elders (decision makers) depending on their Node Age</p>
+        <p>Node Age - A measure of the trustworthiness of a Node. After the initial connection, a Node gets moved at random from Section to Section, building its reputation or Node Age. Once its Node Age reaches a certain value it can be an active participant in the decisions of the Section as an Elder.</p>
+        <p>Proof-of-Resource – A system that rewards Nodes based on the quality of the service they provide, making it economically disadvantageous for them to misbehave</p>
+        <p>qp2p - A networking library that enables peers on a P2P network to communicate securely</p>
+        <p>Resource Supply Rewards – Payment is distributed by the Network to the operators resource-providing Nodes when a Data Payment is received by the Section in which they reside</p>
+        <p>Safe Network - An autonomous data network built on the Safe Protocol that supports a rich application ecosystem to be built on top and utilised by consumers</p>
+        <p>Safe Network Token - The currency of the Safe Network, earned by storing data, spent by uploading data.</p>
+        <p>Safe Protocol - A collection of opensource algorithms, libraries and components that allows computers to form an autonomous data network</p>
+        <p>Section - A subset of addresses on the network; The word Section is also describes group of Nodes that manage such a subset of addresses</p>
+        <p>SectionAuthorityProvider (SAP) - A file providing up-to-date information about a Section and its Elders</p>
+        <p>SectionKey - A BLS key used to authorise decisions that mutate the Network and to sign inter-Section messages; A new SectionKey is generated every time there is a change of Elders</p>
+        <p>SectionTree - A tree of all the SectionKeys linking back to the first Section.</p>
+        <p>Self-Encryption - Content uploaded to the Safe Network is broken up into chunks. These chunks are then hashed, encrypted locally using the AES-256 encryption algorithm and the hashes of neighbouring chunks. Because content is encrypted and decrypted locally, there is no need for keys to leave the user’s machine.</p>
+        <p>Storage Reward Rate - An adjustable factor that determines the rate of pay of participating Nodes; it is increased when more storage is needed, decreased when there is an excess of storage space</p>
+        <p>Supermajority - Larger than a simple majority; 5 out of 7 rather than 4 out of 7</p>
+        <p>Token Emission - 3,167,866,884 SNT, representing 70% of the Maximum Supply, will be emitted over time, at a rate matching growth of data stored on the Network</p>
+        <p>XOR address - A unique 256-bit number; every entity on the Network has an XOR address</p>
+        <p>A note on capitalisations</p>
+<p>For clarity, this primer capitalises words when used specifically in the Safe Network context. For example, ‘Node’ refers specifically to a connected device on the Safe Network, whereas ‘node’ is the general case.</p>
+
+
+
+        
         <h2>About MaidSafe</h2>
 
 
@@ -40,15 +84,13 @@ const component = () => (
 
         <p>Website: <a href="http://www.safenetwork.tech/">www.safenetwork.tech</a></p>
 
-        <p>Developer forum: <a href="http://www.safedev.org/">forum.safedev.org</a></p>
-
-        <p>Developer hub: <a href="https://hub.safedev.org/">https://hub.safedev.org/</a></p>
-
         <p>Github: <a href="https://github.com/maidsafe">https://github.com/maidsafe</a></p>
 
         <p>Twitter: <a href="https://twitter.com/maidsafe">https://twitter.com/maidsafe</a></p>
 
         <p>Twitter: <a href="https://twitter.com/maidsafe">https://twitter.com/safenetworktech</a></p>
+        
+        <p>Mastodon: <a href="https://mastodon.social/safenetwork">https://mastodon.social/safenetwork</a></p>
 
         <p>Reddit: <a href="https://reddit.com/r/safenetwork">https://reddit.com/r/safenetwork</a></p>
 
