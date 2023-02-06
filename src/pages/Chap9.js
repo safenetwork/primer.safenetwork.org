@@ -1,5 +1,6 @@
 import React from 'react';
 import supermajority from '../images/supermajority.png';
+import sectiontree from '../images/sectiontree.jpg';
 import ae1 from '../images/ae1.png';
 import ae2 from '../images/ae2.png';
 import ae3 from '../images/ae3.png';
@@ -39,20 +40,24 @@ const component = () => (
 <li><strong>Distributed Key Generation (DKG)</strong> &ndash; To generate a new BLS SectionKey, the participation of a supermajority of Elders is required.</li>
 <li><strong>New key per churn event</strong> &ndash; every time an Elder is promoted or demoted, a new round of DKG takes place.&nbsp;</li>
 <li><strong>Atomic functionality</strong> - it works or it doesn&apos;t - in case of any conflict or disagreement the actor is requested to try again.</li>
+<li><strong>Gossip</strong> - a quick way of propogating messages through a network. Gossip is used to ensure the Network is always reachable from all Sections. </li>
 </ul>
 
 
-<h3>SectionChain and ProofChain</h3>
-<p>A SectionChain is a cryptographically secure linked list of BLS SectionKeys, each signed by the previous key in the list going back all the way to Genesis. That way, if you trust Genesis (as you must) then you can trust the validity of the latest key.</p>
-<p>If an actor contacting the Section holds an old key, the Section Elders send the actor a ProofChain (plus the SAP, see below) to bring it up to date.</p>
-<p>A ProofChain is simply the most recent part of the SectionChain going back only as far as the last key held by the actor, plus one.&nbsp;</p>
+<h3>SectionTree and ProofChain</h3>
+<p>A SectionTree is a cryptographically secure tree-like record of BLS SectionKeys, each signed by the previous key in the list going back all the way to Genesis - the root of the tree. That way, if you trust Genesis (as you must) then you can trust the validity of the latest key. The leaves of the trees are the current SectionAuthorityProviders (SAPs).</p>
+<p>If an actor contacting the Section holds an old key, the Section Elders send the actor a ProofChain (plus the SAP, see below) to bring it up to date. A ProofChain is simply the branch of the SectionTree that the actor hasn't yet seen.&nbsp;</p>
+<p>In the image below, an actor connecting to Section 14 for the first time would be passed its SAP and a ProofChain shown in red, which in this case goes all the way back to Genesis, via ancestor Sections 7 and 3. If it already held a record of some of that history, the Proof chain would be truncated to only show the information it is missing.</p>
+<div className="Full-width-pic" align="center">
+<img className="Img" src={sectiontree} alt="sectiontree" width="70%" align="center" />
+</div>
 
 
 <h3>SectionAuthorityProvider and SectionActor</h3>
 
 <p>As well as updating the requesting actor with the ProofChain, the Elders also send it the SectionAuthorityProvider (SAP), which gives up-to-date information about the Section and its Elders.</p>
 
-<p>The SAP shows us exactly which Elders are in the Section at the present time as well as the current SectionKey.</p>
+<p>The SAP shows us exactly which Elders are in the Section at the present time as well as the current SectionKey. A new SAP is created every time there is a change of Elders in a Section. Its details are spread by gossip to the other Elders to ensure rapid propogation of this information.</p>
 
 <p>The SAP together with the requirement for a supermajority for agreement allows Section Elders to be treated as a single entity - a SectionActor - rather than as autonomous individuals: they act together or not at all.&nbsp;</p>
 
@@ -78,8 +83,8 @@ const component = () => (
 <p>If five Elders see a Node leave (and generate a new key A) and five see another Node join (and generate a new key B) there must be a minimum of three Elders that see both versions. Under BFT at least one of these Elders must be honest. Therefore, both keys A and B are rejected and a new round of DKG takes place.</p>
 <p>While this process is happening, any requests for data mutation from outside actors will be rejected. This prevents a client manipulating different Elders within a Section by forking the decision-making process.</p>
 
-
-
+<p>Gossip is a type of p2p protocol where a node periodically broadcasts knowledge to another node, often selected at random, and that node passes the message to another node, and so on until it becomes ‘common knowledge’. Gossip is used at various places where the processes can sometimes get stuck, such as DKG rounds, membership and Network splits. In the case of the latter, gossip also allows reconstruction the network after a catastrophic failure.</p>
+<p>In addition, a simple localized consensus protocol MVBA is being introduced to resolve stuck voting processes to ensure they resolve (Chapter7).</p>
 
 <h3 >How AE works &ndash; an example</h3>
 <p>Let&rsquo;s consider the example of a Client requesting a Section to PUT a chunk of data, and assume that the Client has not contacted our Section before. Incidentally, AE works in the same way for communications between Adults and Elders and between Sections too.</p>
@@ -93,15 +98,15 @@ const component = () => (
     <li>Every time the Elders churn a new BLS SectionKey is generated.</li>
     <li>The SAP is what&nbsp;defines the current Section.</li>
     <li>A Section is also defined by its unique XOR address prefix, eg 0011.</li>
-    <li>Each Elder&nbsp; has an ID, a BLS key, SectionChains from its own and other Sections and an address.</li>
-    <li>Each Adult has an ID, a SectionChain and an address.</li>
+    <li>Each Elder&nbsp; has an ID, a BLS key, SectionTrees from its own and other Sections and an address.</li>
+    <li>Each Adult has an ID, a SectionTree and an address.</li>
 </ul>
 <p>2. Client broadcasts a request to all Elders in relevant sections simultaneously</p>
 
 
           <img className="Img" src={ae2} alt="ae2" width="70%" align="center" />
 		  
-		<p>3. SectionActor sends SectionChain and SAP</p>
+		<p>3. SectionActor sends SectionTree and SAP</p>
           <img className="Img" src={ae3} alt="ae3" width="70%" align="center" />
 
 <p>4. But before the Client can resend the message a churn event has occurred with Elder G leaving</p>
@@ -111,7 +116,7 @@ const component = () => (
 
           <img className="Img" src={ae5} alt="ae5" width="70%" align="center" />
 		  
-<p>If an Elder sees a change it messages the other Elders to tell them. The Elders vote on whether a churn event has occurred. In this example, most see that G has gone, one (perhaps geographically further away) can still see G. A supermajority votes that G has gone and a new SectionKey, K6, is generated. If the vote had been split without a supermajority it would simply have been rerun.&nbsp;</p>
+<p>If an Elder sees a change it messages the other Elders via gossip. The Elders vote on whether a churn event has occurred. In this example, most see that G has gone, one (perhaps geographically further away) can still see G. A supermajority votes that G has gone and a new SectionKey, K6, is generated. If the vote had been split without a supermajority it would simply have been rerun.&nbsp;</p>
 <p>While the churn is occurring the Client&rsquo;s message is rejected, but as part of AE it will retry continually.&nbsp;</p>
 
 <p>6. Unaware of the churn, the Client tries again attaching its latest key, K5, to the message</p>
