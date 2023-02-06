@@ -1,4 +1,5 @@
 import React from 'react';
+import data_types from '../images/data_types.png';
 
 
 
@@ -54,7 +55,8 @@ const component = () => (
             <p>Data type - a classification which describes how data can be created, transformed and used. </p>
             <p>Blob - an immutable data type. </p>
             <p>Register - a mutable CRDT data type. </p>
-            <p>Multimap - a mutable CRDT data type for mapping keys to values. </p>            
+            <p>Multimap - a mutable CRDT data type for mapping keys to values. </p>   
+            <p>Merkle DAG - a graph structure where each node is cryptographically linked to the previous node. </p>         
 			<p>File - contains a Data Map showing how to fetch chunks to recreate content, and meta data such as name, etc.   </p>
             <p>Data Map  - a record of file chunks and their corresponding locations on the Network. Only those in possession of the Data Map can recreate the file.  </p>
 			<p>File Map - maps filenames/paths to metadata,</p>
