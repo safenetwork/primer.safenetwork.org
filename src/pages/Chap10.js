@@ -1,5 +1,4 @@
 import React from 'react';
-import data_types from '../images/data_types.png';
 
 
 
