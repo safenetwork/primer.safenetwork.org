@@ -1,5 +1,4 @@
 import React from 'react';
-import node_age from '../images/node_age.png';
 import nodes_journey from '../images/nodes_journey.png';
 
 
