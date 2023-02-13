@@ -5,21 +5,29 @@ const component = (prop) => (
     <div className='header' align={ 'center' }>
         <h1>The Safe Network Primer</h1>
 <p><strong>An introductory guide to the world's first fully autonomous data and communications network</strong></p>
-        <p>Last update: November 2021</p>
+        <p>Last update: February 2023</p>
     </div>
         <hr />
         <div align={' left '}>
             <p>Major changes since last update:
-            <ul>
-  
-                    <li>Implementation of Digital Bearer Certificates </li>
-                    <li>Implementation of Anti-Entropy </li>
-                    <li>Implementation of conflict-free replicated data types (CRDTs)</li>
-                    <li>Move from pay on GET to pay on PUT when remunerating Nodes</li>
-                    <li>New CRDT data types Register, Multimap</li>
-                    <li>Design for n-of-k user authorization</li>
+                <ul><li>Economic system 
+                       <li>Genesis supply</li>
+                       <li>Network royalties</li> 
+                       <li>Initial token distribution</li>
+                    </li>
+                    <li>Reference to the core networking functions as the Safe Protocol</li>
+                    <li>Farmer replaced by 'Node operator'</li>
+                    <li>The Section Tree </li>
+                    <li>The Stable Set</li>
+                    <li>Description of consensus, gossip and eventual termination ideas</li>
+                    <li>Crash fault tolerance idea</li>
+                    <li>Glossary</li>
 
-            </ul>
+
+                    
+                    </ul>
+
+ 
             </p>
             </div>
         <hr />
@@ -27,4 +35,3 @@ const component = (prop) => (
 );
 
 export default component;
-
