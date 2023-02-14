@@ -11,9 +11,11 @@ const component = (prop) => (
         <div align={' left '}>
             <p>Major changes since last update:
                 <ul><li>Economic system 
+                    <ul>
                        <li>Genesis supply</li>
                        <li>Network royalties</li> 
                        <li>Initial token distribution</li>
+                    </ul>
                     </li>
                     <li>Reference to the core networking functions as the Safe Protocol</li>
                     <li>Farmer replaced by 'Node operator'</li>
