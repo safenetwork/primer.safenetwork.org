@@ -149,7 +149,7 @@ const component = () => (
 <p>Importantly, a Section cannot mutate data when it is between states. Only once churn has completed with the agreement of a supermajority of the Elders in the Section will requests for data mutation be accepted. Until then the actor must keep trying.</p></div>
 
    <h3>&nbsp;Tell me more...</h3>
-   <p><a title="anti-entropy" href="https://github.com/maidsafe/sn_entropy_check" target="_blank" rel="noopener noreferrer" >Anti-Entropy (GitHub)</a></p>
+   <p><a title="anti-entropy" href="https://github.com/maidsafe/safe_network/blob/82057ecb0875217efa47f0bcfaad48b43d29d8aa/sn_node/src/node/messaging/anti_entropy.rs" target="_blank" rel="noopener noreferrer" >Anti-Entropy (GitHub)</a></p>
 
 
     </div>
