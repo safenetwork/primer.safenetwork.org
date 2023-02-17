@@ -27,7 +27,7 @@ const component = () => (
         <p>These Data Payment fees are immediately redistributed by the Network as follows:</p>
         <ul>
             <li>85% is paid to qualifying node operators as a Resource Supply Reward</li>
-            <li>14.5% is remitted as Network Royalties</li>
+            <li>15% is remitted as Network Royalties</li>
         </ul>
         </p>
 
