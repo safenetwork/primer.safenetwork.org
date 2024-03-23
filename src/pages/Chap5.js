@@ -65,7 +65,7 @@ const Chap5 = () => (
         <p>Proof of Resource &ndash; ongoing tests that a Node can provide the required resources to the Network.</p>
         <p>Node Age &ndash; a measure of the trustworthiness of a Node. After the initial connection, a Node gets moved at random from Section to Section, building its reputation or Node Age. Once its Node Age reaches a certain value it can be an active participant in the decisions of the Section as an Elder.</p>
             <p>Churn &ndash; the act of Nodes leaving a group or new Nodes joining. Churn means that Sections are not static for long.</p>
-        <p>Elder &ndash; a node with voting rights in its Group. Elders are the oldest Nodes in teh Section.</p>
+        <p>Elder &ndash; a node with voting rights in its Group. Elders are the oldest Nodes in the Section.</p>
         <p>Adult &ndash; a node that has no voting rights but can store data. The most experienced Adults are in the Stable Set.</p>
         <p>Infant &ndash; a node that is waiting to join the Network. It has no voting rights and cannot store data.</p>
         </div>
