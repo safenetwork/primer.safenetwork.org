@@ -1,6 +1,6 @@
 # SAFE Network Primer
 
-> This repository contains the source files for [primer.safenetwork.org](https://primer.safenetwork.org).
+> This repository contains the source files for [(https://docs.autonomi.com/learn)](https://docs.autonomi.com/learn).
 
 An introductory guide to the world's first fully autonomous data and communications network
 
